@@ -1,5 +1,6 @@
 package br.org.generation.YEco.model;
 
+<<<<<<< HEAD
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -84,4 +85,8 @@ public class Produto {
 		this.categoria = categoria;
 	}
 	
+=======
+public class Produto {
+
+>>>>>>> acc1a34577c1387bb74277f1e53c870e599a0928
 }
