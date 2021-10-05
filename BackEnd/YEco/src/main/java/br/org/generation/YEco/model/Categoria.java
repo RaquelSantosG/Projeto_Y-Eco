@@ -38,7 +38,7 @@ public class Categoria {
 	@JsonIgnoreProperties("categoria")
 	private List<Produto> produto;
 
-    public long getId() {
+	public long getId() {
         return id;
     }
 
@@ -69,7 +69,11 @@ public class Categoria {
     public void setSetor(String setor) {
         this.setor = setor;
     }
-    
-    
+    public List<Produto> getProduto() {
+		return produto;
+	}
 
+	public void setProduto(List<Produto> produto) {
+		this.produto = produto;
+	}
 }
