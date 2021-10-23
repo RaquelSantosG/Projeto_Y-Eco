@@ -60,8 +60,8 @@
     <td align="center">
     <img  src="https://avatars.githubusercontent.com/u/72945788?v=4" style="width: 100px; border-radius: 5%">
     <h4><b>Raquel </b></h4>
-      <a href="https://www.linkedin.com/in/gthlbrc/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-      <a href="https://github.com/alyen404" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
+      <a href="https://www.linkedin.com/in/raquel-santos-gomes-b21318187/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+      <a href="https://github.com/RaquelSantosG" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
     <td align="center">
     <img  src="https://avatars.githubusercontent.com/u/49243663?v=4" style="width: 100px; border-radius: 5%">
     <h4><b>Isaias Rodrigues</b></h4>
