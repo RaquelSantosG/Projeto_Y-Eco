@@ -78,10 +78,10 @@
      <a href="https://www.linkedin.com/in/maysa-andrade-maysa-andrade/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
       <a href="https://github.com/mays2pearl" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
     <td align="center">
-    <img  src="https://avatars.githubusercontent.com/u/88196625?v=4" style="width: 100px; border-radius: 5%">
+    <img  src="https://avatars.githubusercontent.com/u/88987545?v=4" style="width: 100px; border-radius: 5%">
     <h4><b> Rodrigo Silva</b></h4>
-      <a href="https://www.linkedin.com/in/rodrigo-araujoo/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-      <a href="https://github.com/Razzkz" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
+      <a href="https://www.linkedin.com/in/marciors92/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+      <a href="https://github.com/marciors92" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
     <td align="center">
   </tr>
 </table>
