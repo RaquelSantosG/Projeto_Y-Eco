@@ -63,30 +63,26 @@
       <a href="https://www.linkedin.com/in/raquel-santos-gomes-b21318187/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
       <a href="https://github.com/RaquelSantosG" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
     <td align="center">
-    <img  src="https://avatars.githubusercontent.com/u/49243663?v=4" style="width: 100px; border-radius: 5%">
-    <h4><b>Isaias Rodrigues</b></h4>
-      <a href="https://www.linkedin.com/in/isaiasz/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-      <a href="https://github.com/isaiaszanoni" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
+    <img  src="https://avatars.githubusercontent.com/u/88937060?v=4" style="width: 100px; border-radius: 5%">
+    <h4><b>Bruno Muraro</b></h4>
+      <a href="" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+      <a href="https://github.com/Bmuraro" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
     <td align="center">
-    <img  src="https://avatars.githubusercontent.com/u/82923237?v=4" style="width: 100px; border-radius: 5%">
-       <h4><b>Jaqueline Ferreira</b></h4>
-      <a href="https://www.linkedin.com/in/jaqueline-ferreira-484403210/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-      <a href="https://github.com/Jaqueline-Ferreira" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
+    <img  src="https://avatars.githubusercontent.com/u/57552535?v=4" style="width: 100px; border-radius: 5%">
+       <h4><b>Julio Balbino</b></h4>
+      <a href="https://www.linkedin.com/in/juliobalbino/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+      <a href="https://github.com/juliobalbino" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
    <td align="center">
-    <img  src="https://avatars.githubusercontent.com/u/87502893?v=4" style="width: 100px; border-radius: 5%">
-    <h4><b>Mayara bueno</b></h4>
-     <a href="https://www.linkedin.com/in/mayara-s-bueno/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-      <a href="https://github.com/mayaralbueno" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
+    <img  src="https://avatars.githubusercontent.com/u/89356698?v=4" style="width: 100px; border-radius: 5%">
+    <h4><b>Maysa Andrade</b></h4>
+     <a href="https://www.linkedin.com/in/maysa-andrade-maysa-andrade/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+      <a href="https://github.com/mays2pearl" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
     <td align="center">
     <img  src="https://avatars.githubusercontent.com/u/88196625?v=4" style="width: 100px; border-radius: 5%">
     <h4><b> Rodrigo Silva</b></h4>
       <a href="https://www.linkedin.com/in/rodrigo-araujoo/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
       <a href="https://github.com/Razzkz" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
     <td align="center">
-    <img  src="https://avatars.githubusercontent.com/u/87865243?v=4" style="width: 100px; border-radius: 5%">
-    <h4><b>Vitor Brandão</b></h4>
-      <a href="https://www.linkedin.com/in/vitorbsilva/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-      <a href="https://github.com/VitorBrandaoS" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
   </tr>
 </table>
 
