@@ -65,7 +65,7 @@
     <td align="center">
     <img  src="https://avatars.githubusercontent.com/u/88937060?v=4" style="width: 100px; border-radius: 5%">
     <h4><b>Bruno Muraro</b></h4>
-      <a href="" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+      <a href="https://www.linkedin.com/in/brunomuraros" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
       <a href="https://github.com/Bmuraro" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
     <td align="center">
     <img  src="https://avatars.githubusercontent.com/u/57552535?v=4" style="width: 100px; border-radius: 5%">
