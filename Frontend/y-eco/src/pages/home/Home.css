@@ -1,0 +1,28 @@
+.background{
+    background-color: #006064 !important;
+}
+
+.texto{
+    color: white!important;
+    font-weight: bold!important;
+    text-align: center;
+}
+
+.botao{
+    border-color: white!important;
+    background-color: #3F51B5;
+    color: white!important;
+}
+
+.img{
+    width: 1000px;
+    height: 1000px;
+    display: block;
+    margin: 0 auto;
+}
+
+.backpost{
+    width: 60%;
+    height: 700px;
+    background-color: black;
+}
