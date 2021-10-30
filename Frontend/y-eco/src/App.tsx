@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+import Sobre from './pages/sobre/Sobre';
 import './App.css';
 
 function App() {
   return (
     <>
-    
+     
+     <Sobre />
+     
     </>
   );
 }
