@@ -1,7 +1,9 @@
 .carrossel{
     width: 60%;
     height: 700px;
-    background-color: black;
+    background-color: #006064;
+    display: flex;
+    justify-content: center;
 }
 
 .carrosselInner{
@@ -17,7 +19,7 @@
 .left{
     flex:5%;
     height: 100%;
-    background-color:rgb(0, 0, 0.6);
+    background-color:rgb(0, 96, 100, 0.6);
     display: grid;
     place-items: center;
     color: white;
@@ -26,7 +28,7 @@
 .right{
     flex:5%;
     height: 100%;
-    background-color:rgb(0, 0, 0.6);
+    background-color:rgb(0, 96, 100, 0.6);
     display: grid;
     place-items: center;
     color: white;
@@ -43,7 +45,7 @@
 }
 
 h1{
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 p{
