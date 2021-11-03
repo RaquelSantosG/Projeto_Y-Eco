@@ -9,6 +9,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { Box } from '@material-ui/system';
+import { Link } from 'react-router-dom';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -70,12 +71,14 @@ function Navbar() {
             <AppBar position="static">
                 <Toolbar className='menu' variant="dense" >
                     <Box display='flex' justifyContent='center' className='boxToolbar'>
-                        <Box mx={5} className='cursor'>
-                            <HomeRoundedIcon className='icon' />
-                            <Typography variant="h6" color="inherit">
-                                home
-                            </Typography>
-                        </Box>
+                        <Link to='/home' className='text-decorator-none'>
+                            <Box mx={5} className='cursor'>
+                                <HomeRoundedIcon className='icon' />
+                                <Typography variant="h6" color="inherit">
+                                    home
+                                </Typography>
+                            </Box>
+                        </Link>
 
                         <Box mx={5} className='cursor'>
                             <ShoppingBagIcon className='icon' />
@@ -90,13 +93,14 @@ function Navbar() {
                                 categoria
                             </Typography>
                         </Box>
-
+                        <Link to='/sobre' className='text-decorator-none'>
                         <Box mx={5} className='cursor'>
                             <FavoriteIcon className='icon' />
                             <Typography variant="h6" color="inherit">
-                                doações
+                                Sobre
                             </Typography>
                         </Box>
+                        </Link>
                     </Box>
                     <Box display='flex' justifyContent='end' width='auto' className='boxToolbar'>
                         <Search>
@@ -109,11 +113,13 @@ function Navbar() {
                             />
                         </Search>
 
-                        <Box display='flex' justifySelf='flex-end' alignItems="center">
-                            <Typography variant="h6" color="inherit">
-                                logout
-                            </Typography>
-                        </Box>
+                        <Link to='/login' className='text-decorator-none logout'>
+                            <Box display='flex' justifySelf='flex-end' alignItems="center">
+                                <Typography variant="h6" color="inherit">
+                                    logout
+                                </Typography>
+                            </Box>
+                        </Link>
                     </Box>
                 </Toolbar>
             </AppBar>
