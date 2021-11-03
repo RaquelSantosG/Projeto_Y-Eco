@@ -1,0 +1,36 @@
+.background{
+    background-color: #006064 !important;
+}
+
+.logo{
+
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.texto{
+    color: white!important;
+    font-weight: bold!important;
+    text-align: center;
+}
+
+.botao{
+    border-color: white!important;
+    background-color: #3F51B5;
+    color: white!important;
+}
+
+.img{
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.backpost{
+    width: 60%;
+    height: 700px;
+    background-color: black;
+}
