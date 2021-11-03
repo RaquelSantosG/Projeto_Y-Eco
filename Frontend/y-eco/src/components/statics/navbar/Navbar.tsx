@@ -9,47 +9,8 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { Box } from '@material-ui/system';
-
-
-const Search = styled('div')(({ theme }) => ({
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    '&:hover': {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(3),
-        width: 'auto',
-    },
-}));
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    '& .MuiInputBase-input': {
-        padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
-        paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('md')]: {
-            width: '20ch',
-        },
-    },
-}));
+import { Link } from 'react-router-dom';
+import { Search, SearchIconWrapper, StyledInputBase } from './SearchComponent';
 
 function Navbar() {
     return (
@@ -70,12 +31,14 @@ function Navbar() {
             <AppBar position="static">
                 <Toolbar className='menu' variant="dense" >
                     <Box display='flex' justifyContent='center' className='boxToolbar'>
-                        <Box mx={5} className='cursor'>
-                            <HomeRoundedIcon className='icon' />
-                            <Typography variant="h6" color="inherit">
-                                home
-                            </Typography>
-                        </Box>
+                        <Link to='/home' className='text-decorator-none'>
+                            <Box mx={5} className='cursor'>
+                                <HomeRoundedIcon className='icon' />
+                                <Typography variant="h6" color="inherit">
+                                    home
+                                </Typography>
+                            </Box>
+                        </Link>
 
                         <Box mx={5} className='cursor'>
                             <ShoppingBagIcon className='icon' />
@@ -90,13 +53,14 @@ function Navbar() {
                                 categoria
                             </Typography>
                         </Box>
-
+                        <Link to='/sobre' className='text-decorator-none'>
                         <Box mx={5} className='cursor'>
                             <FavoriteIcon className='icon' />
                             <Typography variant="h6" color="inherit">
-                                doações
+                                Sobre
                             </Typography>
                         </Box>
+                        </Link>
                     </Box>
                     <Box display='flex' justifyContent='end' width='auto' className='boxToolbar'>
                         <Search>
@@ -109,11 +73,13 @@ function Navbar() {
                             />
                         </Search>
 
-                        <Box display='flex' justifySelf='flex-end' alignItems="center">
-                            <Typography variant="h6" color="inherit">
-                                logout
-                            </Typography>
-                        </Box>
+                        <Link to='/login' className='text-decorator-none logout'>
+                            <Box display='flex' justifySelf='flex-end' alignItems="center">
+                                <Typography variant="h6" color="inherit">
+                                    logout
+                                </Typography>
+                            </Box>
+                        </Link>
                     </Box>
                 </Toolbar>
             </AppBar>
@@ -121,4 +87,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Navbar;
