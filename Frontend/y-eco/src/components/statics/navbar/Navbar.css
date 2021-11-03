@@ -1,0 +1,33 @@
+.cursor{
+    /* display='flex' flexDirection='row' alignItems='center' */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.boxToolbar{
+    background-color: #00363a;
+    width:100%;
+}
+
+.logo{
+    background-color: #006064;
+    min-height: 113px;
+    color: #FFFFFF;
+}
+
+.menu{
+    background-color: #00363a !important;
+    justify-content: center;
+}
+
+.icon{
+    font-size: 35px !important;
+}
+
