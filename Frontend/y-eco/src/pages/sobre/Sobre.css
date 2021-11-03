@@ -1,0 +1,27 @@
+
+
+.imagem{
+   
+
+   
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-decoration-none{
+    text-decoration: none;
+}
+
+.textos{
+    
+    
+    font-weight: bold !important;
+}
+.backColor{
+    background: #39796b;
+}
+.teste{
+    background:#93d3c5;
+}
