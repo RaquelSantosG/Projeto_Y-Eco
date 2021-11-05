@@ -35,3 +35,7 @@
     color: white !important;
 }
 
+.ponteiro{
+    cursor: pointer;
+    color: white;
+}
