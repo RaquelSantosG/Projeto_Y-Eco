@@ -15,7 +15,7 @@ function App() {
       <Switch>
         <div style={{minHeight: '100vh'}}>
           
-          <Route exact path='/cadastrar'>
+          <Route  path='/cadastrar'>
             <CadastroUsuario />
           </Route>
 
@@ -24,6 +24,10 @@ function App() {
           </Route>
 
           <Route path='/home'>
+            <Home />
+          </Route>
+
+          <Route exact path='/'>
             <Home />
           </Route>
 
