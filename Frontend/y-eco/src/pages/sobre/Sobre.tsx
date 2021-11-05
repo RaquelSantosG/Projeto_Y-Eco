@@ -17,7 +17,7 @@ function Sobre(){
                     <Box>
                         <Box display="flex" justifyContent="center">
                             <Box>
-                                <Box display="flex" justifyContent="center" >
+                                <Box marginTop='50px' display="flex" justifyContent="center" >
                                     <Typography variant="h4" color="#39796b">UM POUCO SOBRE NÓS</Typography>
                                 </Box>
 
@@ -46,7 +46,7 @@ function Sobre(){
                                 </Box>
                                 <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
-                    <Box style={{ backgroundColor: "#39796b", height: "120px" }}>
+                    <Box style={{ backgroundColor: "#39796b", height: "120px", borderRadius:'20px' }}>
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
                             <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Contate - me </Typography>
                         </Box>
@@ -82,7 +82,7 @@ function Sobre(){
                                 </Box>
                                 <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
-                    <Box style={{ backgroundColor: "#39796b", height: "120px" }}>
+                    <Box style={{ backgroundColor: "#39796b", height: "120px", borderRadius:'20px' }}>
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
                             <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Contate - me </Typography>
                         </Box>
@@ -118,7 +118,7 @@ function Sobre(){
                                 </Box>
                                 <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
-                    <Box style={{ backgroundColor: "#39796b", height: "120px" }}>
+                    <Box style={{ backgroundColor: "#39796b", height: "120px", borderRadius:'20px' }}>
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
                             <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Contate - me </Typography>
                         </Box>
@@ -152,7 +152,7 @@ function Sobre(){
                                 </Box>
                                 <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
-                    <Box style={{ backgroundColor: "#39796b", height: "120px" }}>
+                    <Box style={{ backgroundColor: "#39796b", height: "120px", borderRadius:'20px' }}>
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
                             <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Contate - me </Typography>
                         </Box>
@@ -186,7 +186,7 @@ function Sobre(){
                                 </Box>
                                 <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
-                    <Box style={{ backgroundColor: "#39796b", height: "120px" }}>
+                    <Box style={{ backgroundColor: "#39796b", height: "120px", borderRadius:'20px'}}>
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
                             <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Contate - me </Typography>
                         </Box>
