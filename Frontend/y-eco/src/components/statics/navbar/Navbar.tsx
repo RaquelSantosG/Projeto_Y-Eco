@@ -10,6 +10,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { Box } from '@material-ui/system';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
+import { setTokenSourceMapRange } from 'typescript';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -53,6 +56,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 function Navbar() {
+    const [token, setToken] = useLocalStorage('token');
+    let history = useHistory();
+
+    function goLogout(){
+        setToken('')
+        alert("Usuario deslogado")
+        history.push('/login')
+    }
+
     return (
         <>
             <Grid container direction="row" justifyContent='center' alignItems="center" >
@@ -113,13 +125,11 @@ function Navbar() {
                             />
                         </Search>
 
-                        <Link to='/login' className='text-decorator-none logout'>
-                            <Box display='flex' justifySelf='flex-end' alignItems="center">
+                            <Box className="ponteiro" display='flex' justifySelf='flex-end' alignItems="center" onClick={goLogout}>
                                 <Typography variant="h6" color="inherit">
                                     logout
                                 </Typography>
                             </Box>
-                        </Link>
                     </Box>
                 </Toolbar>
             </AppBar>
