@@ -7,6 +7,7 @@ import Footer from './components/statics/footer/Footer';
 import Login from './pages/login/Login';
 import Sobre from './pages/sobre/Sobre';
 import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
+import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria';
 
 function App() {
   return (
@@ -33,6 +34,10 @@ function App() {
 
           <Route path='/sobre'>
             <Sobre />
+          </Route>
+          
+          <Route path='/categoria'>
+            <ListaCategoria />
           </Route>
         </div>
       </Switch>
