@@ -48,10 +48,10 @@ function ListaProduto() {
               {produto.descricao}
             </Typography>
             <Typography variant="body2" component="p">
-              {produto.quantidade}
+              {produto.quantidade} unidades
             </Typography>
             <Typography variant="body2" component="p">
-              {produto.valor}
+            R&#36;{produto.valor} 
             </Typography>
             <Typography variant="body2" component="p">
               {produto.categoria?.nome}
@@ -60,7 +60,7 @@ function ListaProduto() {
           <CardActions>
             <Box display="flex" justifyContent="center" mb={1.5}>
 
-              <Link to={`/cadastrarProduto/${produto.id}`} className="text-decorator-none" >
+              <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none" >
                 <Box mx={1}>
                   <Button variant="contained" className="marginLeft" size='small' color="primary" >
                     atualizar

@@ -52,6 +52,10 @@ function App() {
             <CadastroProduto />
           </Route>
 
+          <Route  path='/formularioProduto/:id'>
+            <CadastroProduto />
+          </Route>
+
           <Route exact path='/formularioCategoria'>
             <CadastroCategoria />
           </Route>
