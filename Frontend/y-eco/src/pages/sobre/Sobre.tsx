@@ -8,6 +8,7 @@ import { Grid, Typography } from '@material-ui/core'
 import './Sobre.css';
 import { GitHub, WhatsApp } from '@material-ui/icons';
 
+
 function Sobre(){
     return(
         <div>

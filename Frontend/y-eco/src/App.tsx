@@ -8,6 +8,8 @@ import Login from './pages/login/Login';
 import Sobre from './pages/sobre/Sobre';
 import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria';
+import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
+import CadastroCategoria from './components/categoria/cadastroCategoria/CadastroCategoria';
 
 function App() {
   return (
@@ -39,6 +41,17 @@ function App() {
           <Route path='/categoria'>
             <ListaCategoria />
           </Route>
+
+          <Route exact path='/formularioCategoria'>
+            <CadastroCategoria />
+          </Route>
+          <Route exact path='/formularioCategoria/:id'>
+            <CadastroCategoria />
+          </Route>
+          <Route path='/deletarCategoria/:id'>
+            <DeletarCategoria />
+          </Route>
+
         </div>
       </Switch>
       <Footer />
