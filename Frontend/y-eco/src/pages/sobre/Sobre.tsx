@@ -4,38 +4,78 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import {Button, Box, Paper} from '@material-ui/core';
-import { Grid, Typography } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
+import Avatar from '@material-ui/core/Avatar';
+import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import './Sobre.css';
 import { GitHub, WhatsApp } from '@material-ui/icons';
 
 
 function Sobre(){
     return(
-        <div>
+        <>
             <Grid container  >
-
-                <Grid item direction='column'>
-                    <Box>
-                        <Box display="flex" justifyContent="center">
-                            <Box>
+                 <Grid item xs={6}>
+                    
+                 <Box>
                                 <Box marginTop='50px' display="flex" justifyContent="center" >
+                                <img src="https://cdn.discordapp.com/attachments/882496817550483510/908341953488359505/40313.jpg" alt="" style={{ width: "70%", borderRadius: '6%'}} />
+                                </Box>
+                                <Box display="flex" marginTop='50px' justifyContent="center" >
                                     <Typography variant="h4" color="#39796b">UM POUCO SOBRE NÓS</Typography>
+                                </Box>
+                                <Box p={5}>
+                                    
+                                    <Typography variant="body1" color="#39796b">Aqui você encontra produtos ecológicos, reutilizáveis para o seu dia a dia ser mais sustentável. Pequenas atitudes que geram grandes mudanças! Fortalecer o consumo consciente e a mudança de hábito para preservar nosso planeta.</Typography>
+                                </Box>
+                            </Box>
+                           
+                            </Grid>
+                            <Grid item xs={6} >
+                        <Box>
+                        <Box marginTop='50px' display="flex" justifyContent="center" >
+                                <img src="https://cdn.discordapp.com/attachments/882496817550483510/908341950225203210/17877.jpg" alt="" style={{ width: "70%", borderRadius: '6%'}} />
+                                </Box>
+                                <Box display="flex" marginTop='50px' justifyContent="center" > <Typography variant="h4" color="#39796b">MISSÃO E VALORES!</Typography>
                                 </Box>
 
                                 <Box p={5}>
-                                    <Typography variant="body1" color="#39796b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptate enim labore porro obcaecati necessitatibus a, reprehenderit saepe optio ducimus perferendis eos odio vero. Dolores eos sint saepe quaerat quis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, nostrum quasi doloremque corrupti aliquid doloribus mollitia delectus debitis autem enim eos odio quidem suscipit nam expedita quo consequatur quam perferendis!</Typography>
+                                    <Typography variant="body1" color="#39796b">Missão:
+
+Fornecer dicas e práticas sustentáveis que gerem impactos positivos para o meio ambiente e para sociedade. Engajar cada vez mais pessoas a substituírem materiais de uso único por reutilizáveis.Tornar nossas ações diárias mais respeitosas com o meio ambiente. Proteger nossas futuras gerações da quantidade de resíduos que estão sendo descartados na natureza de forma desenfreada. </Typography>
+
+<Typography variant="body1" color="#39796b">Valores: 
+
+- Amor à vida
+
+- Respeito incondicional à natureza
+
+- Equidade
+
+- Empatia
+
+- Ética e transparência</Typography>
+
                                 </Box>
                             </Box>
-
-
-                        </Box>
-
-
-                    </Box>
+                           
+                        
+                        
                 </Grid>
-                <Paper sx={{ p:1, margin: 'auto', maxWidth:1500, flexGrow: 10 }}>
-                <Grid container direction="row" justifyContent="space-around" alignItems="stretch">
+                <Grid container  justifyContent="center" marginBottom='70px'>
+                <Box display="flex" justifyContent="center"  > <Typography variant="h4" color="#39796b">DESENVOLVEDORES</Typography>
+                                </Box>
+                                </Grid>
+                <Grid container spacing={2} justifyContent="center">
+                
                 <Grid item xs={2}>
+                <Paper elevation={3} sx={{ p:1}}>
+                
                      <Box display="flex" justifyContent="center">
                                     <Typography variant="h4" color="initial">MAYSA</Typography>
                                 </Box>
@@ -60,7 +100,7 @@ function Sobre(){
                             </a>
                         </Box>
                     </Box>
-                    <Box style={{ height: "60px" }}>
+                    <Box style={{ height: "20px" }}>
                         <Box paddingTop={1}>
                             
                         </Box>
@@ -70,8 +110,11 @@ function Sobre(){
                     </Box>
                 </Grid>
             </Grid>
+            </Paper>
                 </Grid>
                 <Grid item xs={2}>
+                <Paper elevation={3} sx={{ p:1, margin: 'auto', maxWidth:1500}}>
+                
                      <Box display="flex" justifyContent="center">
                                     <Typography variant="h4" color="initial">RAQUEL</Typography>
                                 </Box>
@@ -96,7 +139,7 @@ function Sobre(){
                             </a>
                         </Box>
                     </Box>
-                    <Box style={{ height: "60px" }}>
+                    <Box style={{ height: "20px" }}>
                         <Box paddingTop={1}>
                             
                         </Box>
@@ -106,8 +149,11 @@ function Sobre(){
                     </Box>
                 </Grid>
             </Grid>
+            </Paper>
                 </Grid>
                 <Grid item xs={2}>
+                <Paper elevation={3} sx={{ p:1, margin: 'auto', maxWidth:1500}}>
+                
                      <Box display="flex" justifyContent="center">
                                     <Typography variant="h4" color="initial">BRUNO</Typography>
                                 </Box>
@@ -132,7 +178,7 @@ function Sobre(){
                             </a>
                         </Box>
                     </Box>
-                    <Box style={{ height: "60px" }}>
+                    <Box style={{ height: "20px" }}>
                         <Box paddingTop={1}>
                             
                         </Box>
@@ -140,8 +186,11 @@ function Sobre(){
                     </Box>
                 </Grid>
             </Grid>
+            </Paper>
                 </Grid>
                 <Grid item xs={2}>
+                <Paper elevation={3} sx={{ p:1, margin: 'auto', maxWidth:1500}}>
+                
                      <Box display="flex" justifyContent="center">
                                     <Typography variant="h4" color="initial">JÚLIO</Typography>
                                 </Box>
@@ -166,7 +215,7 @@ function Sobre(){
                             </a>
                         </Box>
                     </Box>
-                    <Box style={{ height: "60px" }}>
+                    <Box style={{ height: "20px" }}>
                         <Box paddingTop={1}>
                             
                         </Box>
@@ -174,8 +223,11 @@ function Sobre(){
                     </Box>
                 </Grid>
             </Grid>
+            </Paper>
                 </Grid>
                 <Grid item xs={2}>
+                <Paper elevation={3} sx={{ p:1, margin: 'auto', maxWidth:1500}}>
+                
                      <Box display="flex" justifyContent="center">
                                     <Typography variant="h4" color="initial">MÁRCIO</Typography>
                                 </Box>
@@ -200,7 +252,7 @@ function Sobre(){
                             </a>
                         </Box>
                     </Box>
-                    <Box style={{ height: "60px" }}>
+                    <Box style={{ height: "20px" }}>
                         <Box paddingTop={1}>
                             
                         </Box>
@@ -210,13 +262,15 @@ function Sobre(){
                     </Box>
                 </Grid>
             </Grid>
-                </Grid>
-                
-              
-                </Grid>
             </Paper>
             </Grid>
-        </div>
+                </Grid>
+                
+                
+                </Grid>
+             
+        </>
+
     )
 }
 

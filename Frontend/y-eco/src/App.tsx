@@ -10,7 +10,7 @@ import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria';
 import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
 import CadastroCategoria from './components/categoria/cadastroCategoria/CadastroCategoria';
-import ListaProduto from './components/produtos/listaProdutos/ListaProduto';
+import ListaProduto from './components/produto/listaProdutos/ListaProduto';
 
 function App() {
   return (
