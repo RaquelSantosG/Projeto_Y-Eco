@@ -11,6 +11,7 @@ import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria
 import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
 import CadastroCategoria from './components/categoria/cadastroCategoria/CadastroCategoria';
 import ListaProduto from './components/produto/listaProdutos/ListaProduto';
+import CadastroProduto from './components/produto/cadastroProduto/CadastroProduto';
 
 function App() {
   return (
@@ -45,6 +46,10 @@ function App() {
 
           <Route path='/produtos'>
             <ListaProduto />
+          </Route>
+
+          <Route exact path='/formularioProduto'>
+            <CadastroProduto />
           </Route>
 
           <Route exact path='/formularioCategoria'>

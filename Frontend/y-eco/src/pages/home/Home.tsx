@@ -1,11 +1,12 @@
 import './Home.css';
 import React, { useState } from 'react';
-import { Box, Button, Card, CardActionArea, CardMedia, Container, Grid, Typography } from '@material-ui/core';
+import { Box, Button, Card, CardActionArea, CardMedia, Container, Typography } from '@material-ui/core';
 import './Carrossel.css';
 import {images} from './CarrosselData';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowFowardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Carrossel from './Carrossel';
+import { Grid } from '@mui/material';
 
 function Home() {
     return (

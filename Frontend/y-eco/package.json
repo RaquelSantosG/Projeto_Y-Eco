@@ -1,12 +1,14 @@
 {
-  "name": "blog-pessoal",
+  "name": "blog-pessoal-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.5.0",
-    "@emotion/styled": "11.3.0",
-    "@material-ui/core": "^5.0.0-beta.5",
+    "@emotion/styled": "^11.3.0",
+    "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@material-ui/styles": "^4.11.4",
     "@mui/icons-material": "^5.0.5",
     "@mui/lab": "^5.0.0-alpha.53",
     "@mui/material": "^5.0.6",
@@ -18,15 +20,17 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.3.2",
+    "@types/redux": "^3.6.0",
     "axios": "^0.24.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "react-toastify": "^8.1.0",
     "react-use-localstorage": "^3.5.3",
     "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1",
-    "yarn": "^1.22.17"
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

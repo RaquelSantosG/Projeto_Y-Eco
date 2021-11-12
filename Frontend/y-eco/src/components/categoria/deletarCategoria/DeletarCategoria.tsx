@@ -4,13 +4,14 @@ import './DeletarCategoria.css';
 import { useHistory, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
+import Categoria from '../../../models/Categoria';
 
 
 function DeletarCategoria() {
     let history = useHistory();
     const { id } = useParams<{id: string}>();
     const [token, setToken] = useLocalStorage('token');
-    const [categoria, setCategoria] = useState()
+    const [categoria, setCategoria] = useState<Categoria>();
 
     useEffect(() => {
         if (token == "") {
@@ -56,22 +57,22 @@ function DeletarCategoria() {
           <CardContent>
             <Box justifyContent="center">
               <Typography color="textSecondary" gutterBottom>
-                Deseja deletar o Categoria:
+                Deseja deletar a Categoria:
               </Typography>
               <Typography color="textSecondary">
-                categoria
+                {categoria?.nome}
               </Typography>
             </Box>
           </CardContent>
           <CardActions>
             <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
               <Box mx={2}>
-                <Button variant="contained" className="marginLeft" size='large' color="primary">
+                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
                   Sim
                 </Button>
               </Box>
               <Box mx={2}>
-                <Button variant="contained" size='large' color="secondary">
+                <Button onClick={nao} variant="contained" size='large' color="secondary">
                   Não
                 </Button>
               </Box>

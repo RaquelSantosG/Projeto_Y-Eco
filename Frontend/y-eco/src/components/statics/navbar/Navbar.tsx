@@ -1,14 +1,14 @@
 import './Navbar.css';
 import React from 'react';
 import { styled, alpha } from '@mui/material/styles';
-import { AppBar, Grid, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Box, Grid, Toolbar, Typography } from '@material-ui/core';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
-import { Box } from '@material-ui/system';
+
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
