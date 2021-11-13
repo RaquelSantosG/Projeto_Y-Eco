@@ -1,3 +1,31 @@
 .text-decorator-none {
     text-decoration: none;
 }
+
+.textos {
+    color: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+
+
+}
+
+.textos2 {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+
+
+}
+
+.botao2{
+    border-color: white!important;
+    background-color: #3F51B5;
+    color: white!important;
+
+}
+
+
+
