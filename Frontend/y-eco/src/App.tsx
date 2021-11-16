@@ -12,6 +12,7 @@ import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCat
 import CadastroCategoria from './components/categoria/cadastroCategoria/CadastroCategoria';
 import ListaProduto from './components/produto/listaProdutos/ListaProduto';
 import CadastroProduto from './components/produto/cadastroProduto/CadastroProduto';
+import DeletarProduto from './components/produto/deletarProduto/DeletarProduto';
 
 function App() {
   return (
@@ -66,6 +67,10 @@ function App() {
           
           <Route path='/deletarCategoria/:id'>
             <DeletarCategoria />
+          </Route>
+
+          <Route path='/deletarProduto/:id'>
+            <DeletarProduto />
           </Route>
 
         </div>
