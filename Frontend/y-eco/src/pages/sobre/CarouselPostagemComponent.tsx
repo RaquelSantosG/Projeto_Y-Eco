@@ -1,8 +1,8 @@
-import React from 'react';
-import Carousel from 'react-elastic-carousel';
-import { useState } from 'react';
-import './CarouselPostagemComponent.css';
-import { Box, Grid} from '@mui/material';
+import React from 'react'
+import Carousel from 'react-elastic-carousel'
+import { useState } from 'react'
+import './CarouselPostagemComponent.css'
+import { Box, Grid} from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
