@@ -1,10 +1,7 @@
 import React from 'react';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import {  Box  } from '@material-ui/core';
 import './Sobre.css';
-import { GitHub } from '@material-ui/icons';
-import { Grid, Typography, Paper, Container } from '@mui/material';
-import CarrosselSobre from './CarrosselSobre';
+import CarouselPostagemComponent from './CarouselPostagemComponent';
+import { Box, Container, Grid, Typography } from '@mui/material';
 
 
 function Sobre() {
@@ -58,14 +55,14 @@ function Sobre() {
 
 
                 </Grid>
-                <Grid container justifyContent="center" marginBottom='10px' className='teste'>
+                <Grid container justifyContent="center" marginBottom='100px' className='teste'>
                     <Box display="flex" justifyContent="center" > <Typography variant="h4" color='White'>DESENVOLVEDORES</Typography>
                     </Box>
                 </Grid>
-                <Grid container >
+                <Grid container spacing={12} direction="row" justifyContent="center" alignItems="center"  marginLeft='25%'>
             <Container>
-                <Box justifyContent="center" pt={6} pb={10}  display="flex"  >
-                    <CarrosselSobre/>
+                <Box pt={4} pb={6}>
+              <CarouselPostagemComponent/>
                 </Box>
             </Container>
             </Grid>
