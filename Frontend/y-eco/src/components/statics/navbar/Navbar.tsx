@@ -1,14 +1,6 @@
 import './Navbar.css';
 import React from 'react';
-import { styled, alpha } from '@mui/material/styles';
 import { AppBar, Box, Grid, Toolbar, Typography } from '@material-ui/core';
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import SearchIcon from '@mui/icons-material/Search';
-import InputBase from '@mui/material/InputBase';
-
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
@@ -30,12 +22,7 @@ function Navbar() {
             <Grid container direction="row" justifyContent='center' alignItems="center" >
                 <Grid alignItems="center" item xs={12}>
                     <Box className='logo'>
-                        <Box display='flex' alignItems="center" justifyContent="center">
-                            <Typography variant="h2">Y-Eco</Typography>
-                        </Box>
-                        <Box display='flex' alignItems="center" justifyContent="center">
-                            <Typography variant="h5">Produtos sustentáveis, ecológicos e biodegradáveis</Typography>
-                        </Box>
+                        <img className='imgLogo' src="https://i.imgur.com/mLUh1HH.png" alt="" />  
                     </Box>
                 </Grid>
             </Grid>
@@ -46,34 +33,34 @@ function Navbar() {
 
                         <Link to='/home' className='text-decorator-none'>
                             <Box mx={5} className='cursor'>
-                                <HomeRoundedIcon className='icon' />
+                                
                                 <Typography variant="h6" color="inherit">
-                                    home
+                                    Home
                                 </Typography>
                             </Box>
                         </Link>
 
                         <Link to='/produtos' className='text-decorator-none'>
                             <Box mx={5} className='cursor'>
-                                <ShoppingBagIcon className='icon' />
+                               
                                 <Typography variant="h6" color="inherit">
-                                    produtos
+                                    Produtos
                                 </Typography>
                             </Box>
                         </Link>
 
                         <Link to='/categoria' className='text-decorator-none'>
                             <Box mx={5} className='cursor'>
-                                <DashboardIcon className='icon' />
+                               
                                 <Typography variant="h6" color="inherit">
-                                    categoria
+                                    Categoria
                                 </Typography>
                             </Box>
                         </Link>
 
                         <Link to='/sobre' className='text-decorator-none'>
                             <Box mx={5} className='cursor'>
-                                <FavoriteIcon className='icon' />
+                                
                                 <Typography variant="h6" color="inherit">
                                     Sobre
                                 </Typography>
@@ -84,7 +71,7 @@ function Navbar() {
 
                             <Box className="ponteiro" display='flex' justifySelf='flex-end' alignItems="center" onClick={goLogout}>
                                 <Typography variant="h6" color="inherit">
-                                    logout
+                                    Logout
                                 </Typography>
                             </Box>
                     </Box>
