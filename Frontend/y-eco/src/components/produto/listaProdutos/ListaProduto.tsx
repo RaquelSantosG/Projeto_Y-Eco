@@ -34,28 +34,34 @@ function ListaProduto() {
 
   return (
     <>
-      <Box display="flex" flexWrap="wrap" justifyContent="center" minHeight="100vh">
+      <Box className='principalBox'>
         {
           produto.map(produto =>(
           <Box m={2} >
+            
             <Card className = "cardProduto" variant="outlined">
+            <Link to={`/produto/${produto.id}`} className="text-decorator-none">
               <CardContent>
                 <Box>
-                  <img className = "imgProduto" src="https://i.imgur.com/DAQ5FMZ.png" alt="" />
+                      <img className='imgProduto' src={produto.img} /> 
                 </Box>
+                <Box className="tamanhoBox">
                 <Typography variant="h5" component="h2">
                   {produto.nome}
                 </Typography>
-                <Typography variant="body1" component="p">
+                </Box>
+               
+                
+                <Typography  variant="body1" component="p" className='fontListaProduto'>
                   {produto.quantidade} unidades
                 </Typography>
-                <Typography variant="body2" component="p">
-                R&#36;{produto.valor} 
+                
+                <Typography variant="body2" component="p" className='fontListaProduto'>
+                R&#36;{produto.valor.toFixed(2)} 
                 </Typography>
-                <Typography variant="body2" component="p">
-                  {produto.categoria?.nome}
-                </Typography>
+                
               </CardContent>
+              </Link>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
 

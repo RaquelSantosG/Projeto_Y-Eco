@@ -1,5 +1,6 @@
 .text-decorator-none{
     text-decoration: none;
+    color: black !important;
 }
 
 .card {
@@ -21,3 +22,27 @@
     width: 250px;
     height: 540px;
 }
+
+.fontListaProduto{
+    text-align: justify;
+    font-size: 20px !important;
+}
+
+.tamanhoBox{
+    height: 30px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.principalBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+
+
