@@ -12,7 +12,6 @@ import InputBase from '@mui/material/InputBase';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
-import { Search, SearchIconWrapper, StyledInputBase } from './SearchComponent';
 
 
 function Navbar() {
