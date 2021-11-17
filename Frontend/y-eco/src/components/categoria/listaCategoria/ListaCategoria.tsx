@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import Categoria from '../../../models/Categoria';
 import './ListaCategoria.css';
 import useLocalStorage from 'react-use-localstorage';
 import { useHistory } from 'react-router-dom';
 import { busca } from '../../../services/Service';
+import { Grid, Box } from '@mui/material';
+
 
 function ListaCategoria() {
   const [categorias, setCategoria] = useState<Categoria[]>([])
@@ -35,12 +37,13 @@ function ListaCategoria() {
 
   return (
     <>
+   <Grid container  justifyContent="center" alignItems="center" >
       <Box display="flex" flexWrap="wrap" justifyContent="center">
         {
           categorias.map(categoria => (
-            <Box m={12}>
-              <Box display="flex" flexWrap="wrap" justifyContent="center">
-                <Box padding={4}>
+            <Box m={6}>
+              <Box display="flex">
+              <Box padding={2}>
                   <Card variant="outlined">
                     <CardContent>
                       <Typography variant="h4" component="h4" className='textos2'>
@@ -58,7 +61,7 @@ function ListaCategoria() {
                         <Box>
                           <Link to={`/formularioCategoria/${categoria.id}`} className="text-decorator-none">
                             <Box mx={1} display="flex" justifyContent="center">
-                              <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                              <Button variant="contained" className="botao3" size='small' color="primary" >
                                 atualizar
                               </Button>
                             </Box>
@@ -81,6 +84,7 @@ function ListaCategoria() {
           ))
         }
       </Box>
+      </Grid>
 
     </>
   );
