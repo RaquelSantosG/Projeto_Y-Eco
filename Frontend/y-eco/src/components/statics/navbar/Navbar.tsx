@@ -4,7 +4,6 @@ import { AppBar, Box, Grid, Toolbar, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
-import { Search, SearchIconWrapper, StyledInputBase } from './SearchComponent';
 
 
 function Navbar() {

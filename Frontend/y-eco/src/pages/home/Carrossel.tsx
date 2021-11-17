@@ -14,7 +14,7 @@ function Carrossel(){
                 <div className='left' onClick={() =>{currImg > 0 && setCurrImg(currImg - 1);}}>
                     <ArrowBackIosIcon style={{fontSize: 30}}/>
                 </div>
-                <div className='center'> <h1>{images[currImg].title}</h1><p>{images[currImg].subtitle}</p></div>
+                <div className='center'></div>
                 <div className='right' onClick={() =>{currImg < images.length - 1 && setCurrImg(currImg + 1);}}>
                 <ArrowFowardIosIcon style={{fontSize: 30}}/>
                 </div>
