@@ -1,6 +1,6 @@
 import './Home.css';
 import React, { useState , useEffect  } from 'react';
-import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core';
+import { Box, Card, CardActionArea, CardContent, CardMedia, Link, Typography } from '@material-ui/core';
 import './Carrossel.css';
 import Carrossel from './Carrossel';
 import { Grid } from '@mui/material';
@@ -44,7 +44,7 @@ function Home() {
                         </Grid>
                         <Grid item xs={6} display='flex' justifyContent="center" marginBottom='10%'>
                                 <Card>
-                                        <CardActionArea href="#">
+                                        <CardActionArea href="/produto/4">
                                                 <CardMedia
                                                         component="img"
                                                         height="350"
@@ -65,7 +65,7 @@ function Home() {
 
                         <Grid item xs={6} display='flex' justifyContent="center" marginBottom='10%'>
                                 <Card>
-                                        <CardActionArea href="#">
+                                        <CardActionArea >
                                                 <CardMedia
                                                         component="img"
                                                         height="350"
@@ -89,7 +89,7 @@ function Home() {
                         </Grid>
                         <Grid item xs={6} display='flex' justifyContent="center" marginBottom='10%'>
                                 <Card>
-                                        <CardActionArea href="#">
+                                        <CardActionArea>
                                                 <CardMedia
                                                         component="img"
                                                         height="350"
@@ -109,7 +109,7 @@ function Home() {
                         </Grid>
                         <Grid item xs={6} display='flex' justifyContent="center" marginBottom='10%'>
                                 <Card>
-                                        <CardActionArea href="#">
+                                        <CardActionArea>
                                                 <CardMedia
                                                         component="img"
                                                         height="350"

@@ -5,7 +5,6 @@ import Home from './pages/home/Home';
 import Navbar from './components/statics/navbar/Navbar';
 import Footer from './components/statics/footer/Footer';
 import Login from './pages/login/Login';
-import Sobre from './pages/sobre/Sobre';
 import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria';
 import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
@@ -42,10 +41,6 @@ function App() {
 
           <Route exact path='/'>
             <Login />
-          </Route>
-
-          <Route path='/sobre'>
-            <Sobre />
           </Route>
           
           <Route path='/categoria'>
