@@ -17,7 +17,7 @@ function ListaProduto() {
   useEffect(() => {
     if (token == "") {
       alert("Você precisa estar logado")
-      history.push("/home")
+      history.push("/login")
 
     }
   }, [token])

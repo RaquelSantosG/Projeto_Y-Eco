@@ -35,7 +35,7 @@ function App() {
           </Route>
 
           <Route exact path='/'>
-            <Home />
+            <Login />
           </Route>
 
           <Route path='/sobre'>
