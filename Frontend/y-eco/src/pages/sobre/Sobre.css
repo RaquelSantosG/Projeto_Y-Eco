@@ -24,11 +24,3 @@
     background:#00363a;
 }
 
-.imagemBack2{
-    background-image:url('https://cdn.discordapp.com/attachments/882496817550483510/910602236885876736/Desenho_sem_titulo_14.png') ;
-    background-position:  center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-     /* Resize the background image to cover the entire container */
-    background-size: 1700px 1700px;
-    
-}

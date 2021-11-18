@@ -56,3 +56,7 @@
     height: 700px;
     background-color: black;
 }
+.imagemBack{
+    background-color: #eafdfd;
+    background-image: url("https://www.transparenttextures.com/patterns/grid-noise.png");   
+}

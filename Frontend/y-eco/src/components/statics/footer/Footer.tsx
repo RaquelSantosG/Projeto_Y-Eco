@@ -35,8 +35,8 @@ function Footer() {
                             <Typography variant="subtitle2" align="center" gutterBottom className='textos'>© 2021 Copyright: Grupo Y-Eco</Typography>
                         </Box>
                         <Box>
-                            <a target="_blank" href="https://brasil.generation.org">
-                                <Typography variant="subtitle2" gutterBottom className='textos' align="center">brasil.generation.org</Typography>
+                            <a target="_blank" href="https://y-eco.herokuapp.com/">
+                                <Typography variant="subtitle2" gutterBottom className='textos' align="center">y-eco.herokuapp.com/</Typography>
                             </a>
                         </Box>
                     </Box>
