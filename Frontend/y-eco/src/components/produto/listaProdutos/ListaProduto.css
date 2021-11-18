@@ -1,3 +1,48 @@
 .text-decorator-none{
     text-decoration: none;
+    color: black !important;
 }
+
+.card {
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.border-image{
+ border-radius: 20px;
+}
+
+.imgProduto {
+    height: 200px;
+    width: 200px;
+}
+
+.cardProduto {
+    width: 250px;
+    height: 540px;
+}
+
+.fontListaProduto{
+    text-align: justify;
+    font-size: 20px !important;
+}
+
+.tamanhoBox{
+    height: 30px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.principalBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+
+

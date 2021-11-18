@@ -7,6 +7,7 @@ import Produto from '../../../models/Produto';
 import Categoria from '../../../models/Categoria';
 import { post, put, busca, buscaId} from '../../../services/Service';
 
+
 function CadastroProduto() {
  
     let history = useHistory();
@@ -33,6 +34,7 @@ function CadastroProduto() {
         id: 0,
         nome: '',
         descricao: '',
+        img:'',
         quantidade:0,
         valor:0,
         categoria: null
@@ -110,8 +112,11 @@ function CadastroProduto() {
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro produto</Typography>
                 <TextField value={produto.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="nome" label="nome" variant="outlined" name="nome" margin="normal" fullWidth />
                 <TextField value={produto.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="descricao" label="descricao" name="descricao" variant="outlined" margin="normal" fullWidth />
+                <TextField value={produto.img} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="img" placeholder="Insira a url da imagem" label="img" name="img" variant="outlined" margin="normal" fullWidth />
                 <TextField value={produto.quantidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="quantidade" label="quantidade" name="quantidade" variant="outlined" margin="normal" fullWidth />
-                <TextField value={produto.valor} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="valor" label="valor" name="valor" variant="outlined" margin="normal" fullWidth />
+                <TextField value={produto.valor} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="valor" placeholder='0.00' label="valor" name="valor" variant="outlined" margin="normal" fullWidth />
+                
+                
 
                 <FormControl >
                     <InputLabel id="demo-simple-select-helper-label">Produto</InputLabel>
@@ -125,7 +130,7 @@ function CadastroProduto() {
                         })}>
                         {
                             categorias.map(categoria => (
-                                <MenuItem value={categoria.id}>{categoria.nome}</MenuItem>
+                                <MenuItem value={categoria.id}>{categoria.nome} - {categoria.setor} - {categoria.tipo} </MenuItem>
                             ))
                         }
                     </Select>

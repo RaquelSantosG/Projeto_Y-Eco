@@ -6,6 +6,7 @@ import Produto from '../../../models/Produto';
 
 import useLocalStorage from 'react-use-localstorage';
 import { busca } from '../../../services/Service';
+import { BorderClear } from '@material-ui/icons';
 
 function ListaProduto() {
 
@@ -21,65 +22,70 @@ function ListaProduto() {
     }
   }, [token])
 
-  async function getProduto(){
+  async function getProduto() {
     await busca('/produto', setProduto, {
-      headers:{'Authorization': token}
+      headers: { 'Authorization': token }
     })
   }
 
-  useEffect (()=>{
+  useEffect(() => {
     getProduto()
-  },[produto.length])
+  }, [produto.length])
 
   return (
     <>
-    {
-      produto.map(produto =>(
-      <Box m={2} >
-        <Card variant="outlined">
-          <CardContent>
-            <Typography color="textSecondary" gutterBottom>
-              Produtos
-            </Typography>
-            <Typography variant="h5" component="h2">
-              {produto.nome}
-            </Typography>
-            <Typography variant="body2" component="p">
-              {produto.descricao}
-            </Typography>
-            <Typography variant="body2" component="p">
-              {produto.quantidade} unidades
-            </Typography>
-            <Typography variant="body2" component="p">
-            R&#36;{produto.valor} 
-            </Typography>
-            <Typography variant="body2" component="p">
-              {produto.categoria?.nome}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Box display="flex" justifyContent="center" mb={1.5}>
+      <Box className='principalBox'>
+        {
+          produto.map(produto =>(
+          <Box m={2} >
+            
+            <Card className = "cardProduto" variant="outlined">
+            <Link to={`/produto/${produto.id}`} className="text-decorator-none">
+              <CardContent>
+                <Box>
+                      <img className='imgProduto' src={produto.img} /> 
+                </Box>
+                <Box className="tamanhoBox">
+                <Typography variant="h5" component="h2">
+                  {produto.nome}
+                </Typography>
+                </Box>
+               
+                
+                <Typography  variant="body1" component="p" className='fontListaProduto'>
+                  {produto.quantidade} unidades
+                </Typography>
+                
+                <Typography variant="body2" component="p" className='fontListaProduto'>
+                R&#36;{produto.valor.toFixed(2)} 
+                </Typography>
+                
+              </CardContent>
+              </Link>
+              <CardActions>
+                <Box display="flex" justifyContent="center" mb={1.5}>
 
-              <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none" >
-                <Box mx={1}>
-                  <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                    atualizar
-                  </Button>
+                  <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none" >
+                    <Box mx={1}>
+                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                        atualizar
+                      </Button>
+                    </Box>
+                  </Link>
+                  <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
+                    <Box mx={1}>
+                      <Button variant="contained" size='small' color="secondary">
+                        deletar
+                      </Button>
+                    </Box>
+                  </Link>
                 </Box>
-              </Link>
-              <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
-                <Box mx={1}>
-                  <Button variant="contained" size='small' color="secondary">
-                    deletar
-                  </Button>
-                </Box>
-              </Link>
-            </Box>
-          </CardActions>
-        </Card>
+              </CardActions>
+            </Card>
+          </Box>
+          ))
+        }
       </Box>
-      ))
-      }
     </>)
 }
 

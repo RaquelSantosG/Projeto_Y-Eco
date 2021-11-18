@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import {Box, Card, CardActions, CardContent, Button, Typography} from '@material-ui/core';
-import './DeletarCategoria.css';
+import './DeletarProduto.css';
 import { useHistory, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
-import Categoria from '../../../models/Categoria';
+import Produto from '../../../models/Produto';
 
 
-function DeletarCategoria() {
+function DeletarProduto() {
     let history = useHistory();
     const { id } = useParams<{id: string}>();
     const [token, setToken] = useLocalStorage('token');
-    const [categoria, setCategoria] = useState<Categoria>();
+    const [produto, setProduto] = useState<Produto>();
 
     useEffect(() => {
         if (token == "") {
@@ -28,7 +28,7 @@ function DeletarCategoria() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`/categoria/${id}`, setCategoria, {
+        buscaId(`/produto/${id}`, setProduto, {
             headers: {
               'Authorization': token
             }
@@ -36,17 +36,17 @@ function DeletarCategoria() {
         }
 
         function sim() {
-            history.push('/categoria')
-            deleteId(`/categoria/${id}`, {
+            history.push('/produtos')
+            deleteId(`/produto/${id}`, {
               headers: {
                 'Authorization': token
               }
             });
-            alert('Categoria deletado com sucesso');
+            alert('Produto deletado com sucesso');
           }
         
           function nao() {
-            history.push('/categoria')
+            history.push('/produtos')
           }
   
           
@@ -57,10 +57,10 @@ function DeletarCategoria() {
           <CardContent>
             <Box justifyContent="center">
               <Typography color="textPrimary" gutterBottom>
-                Deseja deletar a Categoria:
+                Deseja deletar o Produto:
               </Typography>
               <Typography color="textSecondary">
-                {categoria?.nome}
+                {produto?.nome}
               </Typography>
             </Box>
           </CardContent>
@@ -83,7 +83,7 @@ function DeletarCategoria() {
     </>
   );
 }
-export default DeletarCategoria;
+export default DeletarProduto;
 
 
 

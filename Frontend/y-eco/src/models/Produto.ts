@@ -6,6 +6,7 @@ interface Produto{
     quantidade: number;
     valor: number;
     descricao: string;
+    img: string;
     categoria?: Categoria | null;
 }
 

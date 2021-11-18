@@ -18,8 +18,8 @@
 
 .logo{
     background-color: #006064;
-    min-height: 113px;
-    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
 }
 
 .menu{
@@ -38,4 +38,9 @@
 .ponteiro{
     cursor: pointer;
     color: white;
+}
+
+.imgLogo{
+    height: 200px;
+    
 }

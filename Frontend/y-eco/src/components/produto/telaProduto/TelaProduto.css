@@ -1,0 +1,24 @@
+.imgTelaProduto{
+    height: 400px;
+    width: 500px;
+}
+
+.cardTelaProduto{
+    width: 1300px;
+    min-height: 800px;
+    justify-content: center;
+}
+
+.nomeProduto{
+    margin-bottom: 10px;
+}
+
+.fontProduto{
+    text-align: justify;
+    font-size: 18px !important;
+}
+
+.fontProdutoTitulo{
+    font-weight: bold !important;
+}
+
