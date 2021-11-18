@@ -52,21 +52,21 @@ function ListaCategoria() {
   return (
     <>
    <Grid container  justifyContent="center" alignItems="center" >
-      <Box display="flex" flexWrap="wrap" justifyContent="center">
+      <Box className='principalBox2'>
         {
           categorias.map(categoria => (
-            <Box m={6}>
+            <Box m={3}>
               <Box display="flex">
               <Box padding={2}>
-                  <Card variant="outlined">
+                  <Card variant="outlined" className = 'card2'>
                     <CardContent>
-                      <Typography variant="h4" component="h4" className='textos2'>
+                      <Typography variant="h4" component="h4">
                         {categoria.nome}
                       </Typography>
-                      <Typography variant="h5" component="h5" className='textos'>
+                      <Typography variant="h5" component="h5" >
                         {categoria.setor}
                       </Typography>
-                      <Typography variant="h5" component="h5" className='textos'>
+                      <Typography variant="h5" component="h5" >
                         {categoria.tipo}
                       </Typography>
                     </CardContent>
@@ -75,14 +75,14 @@ function ListaCategoria() {
                         <Box>
                           <Link to={`/formularioCategoria/${categoria.id}`} className="text-decorator-none">
                             <Box mx={1} display="flex" justifyContent="center">
-                              <Button variant="contained" className="botao3" size='small' color="primary" >
+                              <Button variant="contained"  size='small' color="primary" >
                                 atualizar
                               </Button>
                             </Box>
                           </Link>
                         </Box>
 
-                        <Link to={`/deletarCategoria/${categoria.id}`} className="text-decorator-none">
+                        <Link to={`/deletarCategoria/${categoria.id}`} className="text-decorator-none2">
                           <Box mx={1} display="flex" justifyContent="center">
                             <Button variant="contained" size='small' color="secondary" className='botao2' >
                               deletar
