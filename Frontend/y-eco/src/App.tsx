@@ -16,10 +16,13 @@ import DeletarProduto from './components/produto/deletarProduto/DeletarProduto';
 import TelaProduto from './components/produto/telaProduto/TelaPoduto';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <Provider store={store}>
+      <ToastContainer />
     <Router>
       <Navbar />
       <Switch>

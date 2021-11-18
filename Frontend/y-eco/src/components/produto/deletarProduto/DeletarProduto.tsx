@@ -7,6 +7,7 @@ import { buscaId, deleteId } from '../../../services/Service';
 import Produto from '../../../models/Produto';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 
 function DeletarProduto() {
@@ -19,7 +20,16 @@ function DeletarProduto() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+          toast.error('Você precisa estar logado', {
+            position: 'top-right',
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: 'colored',
+            progress: undefined,
+        });
             history.push("/login")
     
         }
@@ -46,7 +56,16 @@ function DeletarProduto() {
                 'Authorization': token
               }
             });
-            alert('Produto deletado com sucesso');
+            toast.success('Produto deletado com sucesso', {
+              position: 'top-right',
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: false,
+              theme: 'colored',
+              progress: undefined,
+          });
           }
         
           function nao() {

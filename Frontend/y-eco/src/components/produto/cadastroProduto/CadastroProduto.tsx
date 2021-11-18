@@ -8,6 +8,7 @@ import Categoria from '../../../models/Categoria';
 import { post, put, busca, buscaId} from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 
 function CadastroProduto() {
@@ -21,7 +22,16 @@ function CadastroProduto() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+            toast.error('Você precisa estar logado', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
             history.push("/login")
 
         }
@@ -93,14 +103,32 @@ function CadastroProduto() {
                     'Authorization': token
                 }
             })
-            alert('Produto atualizado com sucesso');
+            toast.success('Produto atualizado com sucesso', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
         } else {
             post(`/produto`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Produto cadastrado com sucesso');
+            toast.success('Produto cadastrado com sucesso', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
         }
         back()
 

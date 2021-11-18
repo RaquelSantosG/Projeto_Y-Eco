@@ -6,6 +6,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { buscaId, post, put } from '../../../services/Service';
 import { useHistory, useParams } from 'react-router';
 import Categoria from '../../../models/Categoria';
+import { toast } from 'react-toastify';
 
 
 
@@ -25,7 +26,16 @@ function CadastroCategoria() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+            toast.error('Você precisa estar logado', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
             history.push("/login")
 
         }
@@ -65,14 +75,32 @@ function CadastroCategoria() {
                     'Authorization': token
                 }
             })
-            alert('Categoria atualizado com sucesso');
+            toast.success('Categoria atualizada com sucesso', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
         } else {
             post(`/categoria`, categoria, setCategoria, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Categoria cadastrado com sucesso');
+            toast.success('Categoria cadastrada com sucesso', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
         }
         back()
 

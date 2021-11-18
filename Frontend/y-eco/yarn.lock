@@ -9951,7 +9951,7 @@ react-swipeable@^5.5.1:
   dependencies:
     prop-types "^15.6.2"
 
-react-toastify@^8.1.0:
+react-toastify@^8.0.3:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-8.1.0.tgz#acaca4e8c4415c8474562dd84a14e6f390ed7f17"
   integrity sha512-M+Q3rTmEw/53Csr7NsV/YnldJe4c7uERcY7Tma9mvLU98QT2VhIkKwjBzzxZkJRk/oBKyUAtkyMjMgO00hx6gQ==
