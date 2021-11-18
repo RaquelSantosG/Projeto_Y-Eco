@@ -6,6 +6,8 @@ import useLocalStorage from 'react-use-localstorage';
 import Produto from '../../../models/Produto';
 import Categoria from '../../../models/Categoria';
 import { post, put, busca, buscaId} from '../../../services/Service';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 
 function CadastroProduto() {
@@ -13,7 +15,9 @@ function CadastroProduto() {
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([])
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
 
     useEffect(() => {
         if (token == "") {

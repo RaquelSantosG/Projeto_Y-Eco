@@ -7,11 +7,15 @@ import Produto from '../../../models/Produto';
 import useLocalStorage from 'react-use-localstorage';
 import { busca } from '../../../services/Service';
 import { BorderClear } from '@material-ui/icons';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function ListaProduto() {
 
   const [produto, setProduto] = useState<Produto[]>([])
-  const [token, setToken] = useLocalStorage('token');
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+);
   let history = useHistory();
 
   useEffect(() => {

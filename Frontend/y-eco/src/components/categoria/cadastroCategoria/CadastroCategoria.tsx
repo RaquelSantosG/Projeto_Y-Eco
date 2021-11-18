@@ -1,7 +1,8 @@
 import React, { useState, useEffect, ChangeEvent } from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
 import './CadastroCategoria.css';
-import useLocalStorage from 'react-use-localstorage';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 import { buscaId, post, put } from '../../../services/Service';
 import { useHistory, useParams } from 'react-router';
 import Categoria from '../../../models/Categoria';
@@ -12,7 +13,9 @@ import Categoria from '../../../models/Categoria';
 function CadastroCategoria() {
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
     const [categoria, setCategoria] = useState<Categoria>({
         id: 0,
         nome: '',

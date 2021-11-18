@@ -14,9 +14,12 @@ import ListaProduto from './components/produto/listaProdutos/ListaProduto';
 import CadastroProduto from './components/produto/cadastroProduto/CadastroProduto';
 import DeletarProduto from './components/produto/deletarProduto/DeletarProduto';
 import TelaProduto from './components/produto/telaProduto/TelaPoduto';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 function App() {
   return (
+    <Provider store={store}>
     <Router>
       <Navbar />
       <Switch>
@@ -82,6 +85,7 @@ function App() {
       </Switch>
       <Footer />
     </Router>
+    </Provider>
   );
 }
 

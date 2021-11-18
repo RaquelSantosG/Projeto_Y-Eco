@@ -4,9 +4,11 @@ import { Box, Card, CardActions, CardContent, Button, Typography } from '@materi
 import './TelaProduto.css';
 import Produto from '../../../models/Produto';
 
-import useLocalStorage from 'react-use-localstorage';
+
 import { busca, buscaId } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 
 function TelaProduto() {
@@ -14,7 +16,9 @@ function TelaProduto() {
   let history = useHistory();
   const { id } = useParams<{ id: string }>();
   const [categorias, setCategorias] = useState<Categoria[]>([])
-  const [token, setToken] = useLocalStorage('token');
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+);
 
   useEffect(() => {
       if (token == "") {
