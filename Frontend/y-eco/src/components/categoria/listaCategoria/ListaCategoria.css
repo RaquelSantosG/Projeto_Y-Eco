@@ -1,37 +1,45 @@
-.text-decorator-none {
+.text-decorator-none2{
     text-decoration: none;
+    color: black !important;
 }
 
-.textos {
-    color: grey;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: Garamond;
-    font-size: 20px;
-    font-weight: bold;
-
-
+.card2{
+ color: black;
 }
 
-.textos2 {
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: Baskerville;
-
-
+.border-image2{
+ border-radius: 20px;
 }
 
-.botao2{
-    border-color: white!important;
-    background-color: red !important;
-    color: white!important;
-
+.imgProduto2{
+    height: 200px;
+    width: 200px;
 }
 
-.botao3{
-    border-color: white!important;
-    background-color: blue !important;
-    color: white!important;
+.cardProduto2{
+    width: 250px;
+    height: 540px;
+}
 
+.fontListaProduto2{
+    text-align: justify;
+    font-size: 20px !important;
+}
+
+.tamanhoBox2{
+    height: 30px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.principalBox2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    padding-left: 250px;
+    padding-right: 250px;
 }
 
 
