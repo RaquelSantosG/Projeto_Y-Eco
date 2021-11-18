@@ -1,14 +1,16 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import Categoria from '../../../models/Categoria';
 import './ListaCategoria.css';
 import useLocalStorage from 'react-use-localstorage';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import { Grid, Box } from '@mui/material';
+
 
 function ListaCategoria() {
   const [categorias, setCategoria] = useState<Categoria[]>([])
@@ -43,53 +45,61 @@ function ListaCategoria() {
   }
 
 
-  useEffect(()=>{
+  useEffect(() => {
     getCategoria()
   }, [categorias.length])
 
   return (
     <>
-    {
-      categorias.map(categoria =>(
-      <Box m={2} >
-        <Card variant="outlined">
-          <CardContent>
-            <Typography color="textSecondary" gutterBottom>
-              Categoria
-            </Typography>
-            <Typography variant="h5" component="h2">
-             {categoria.nome}
-            </Typography>
-            <Typography variant="h5" component="h2">
-             {categoria.setor}
-            </Typography>
-            <Typography variant="h5" component="h2">
-             {categoria.tipo}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Box display="flex" justifyContent="center" mb={1.5} >
+   <Grid container  justifyContent="center" alignItems="center" >
+      <Box display="flex" flexWrap="wrap" justifyContent="center">
+        {
+          categorias.map(categoria => (
+            <Box m={6}>
+              <Box display="flex">
+              <Box padding={2}>
+                  <Card variant="outlined">
+                    <CardContent>
+                      <Typography variant="h4" component="h4" className='textos2'>
+                        {categoria.nome}
+                      </Typography>
+                      <Typography variant="h5" component="h5" className='textos'>
+                        {categoria.setor}
+                      </Typography>
+                      <Typography variant="h5" component="h5" className='textos'>
+                        {categoria.tipo}
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Box display="flex" justifyContent="center" mb={1.5}>
+                        <Box>
+                          <Link to={`/formularioCategoria/${categoria.id}`} className="text-decorator-none">
+                            <Box mx={1} display="flex" justifyContent="center">
+                              <Button variant="contained" className="botao3" size='small' color="primary" >
+                                atualizar
+                              </Button>
+                            </Box>
+                          </Link>
+                        </Box>
 
-              <Link to={`/formularioCategoria/${categoria.id}`} className="text-decorator-none">
-                <Box mx={1}>
-                  <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                    atualizar
-                  </Button>
+                        <Link to={`/deletarCategoria/${categoria.id}`} className="text-decorator-none">
+                          <Box mx={1} display="flex" justifyContent="center">
+                            <Button variant="contained" size='small' color="secondary" className='botao2' >
+                              deletar
+                            </Button>
+                          </Box>
+                        </Link>
+                      </Box>
+                    </CardActions>
+                  </Card>
                 </Box>
-              </Link>
-              <Link to={`/deletarCategoria/${categoria.id}`} className="text-decorator-none">
-                <Box mx={1}>
-                  <Button variant="contained" size='small' color="secondary">
-                    deletar
-                  </Button>
-                </Box>
-              </Link>
+              </Box>
             </Box>
-          </CardActions>
-        </Card>
+          ))
+        }
       </Box>
-      ))
-      }
+      </Grid>
+
     </>
   );
 }
