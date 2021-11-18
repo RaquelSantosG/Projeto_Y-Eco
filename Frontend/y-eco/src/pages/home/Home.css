@@ -60,3 +60,7 @@
     background-color: #eafdfd;
     background-image: url("https://www.transparenttextures.com/patterns/grid-noise.png");   
 }
+.text-decoration-none{
+    text-decoration: none;
+    color: black;
+}

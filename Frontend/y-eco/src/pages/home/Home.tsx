@@ -8,6 +8,7 @@ import { useHistory } from 'react-router';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 function Home() {
 
@@ -44,7 +45,8 @@ function Home() {
                         </Grid>
                         <Grid item xs={6} display='flex' justifyContent="center" marginBottom='10%'>
                                 <Card>
-                                        <CardActionArea href="#">
+                                        <Link to='/produto/4' className='text-decoration-none'>
+                                        <CardActionArea >
                                                 <CardMedia
                                                         component="img"
                                                         height="350"
@@ -60,12 +62,14 @@ function Home() {
                                                         </Typography>
                                                 </CardContent>
                                         </CardActionArea>
+                                        </Link>
                                 </Card>
                         </Grid>
 
                         <Grid item xs={6} display='flex' justifyContent="center" marginBottom='10%'>
                                 <Card>
-                                        <CardActionArea href="#">
+                                <Link to='/produto/3' className='text-decoration-none'>
+                                        <CardActionArea >
                                                 <CardMedia
                                                         component="img"
                                                         height="350"
@@ -81,6 +85,7 @@ function Home() {
                                                         </Typography>
                                                 </CardContent>
                                         </CardActionArea>
+                                        </Link>
                                 </Card>
                         </Grid>
                         <Grid item xs={12} display='flex' justifyContent='center' alignItems="center" >
@@ -89,7 +94,8 @@ function Home() {
                         </Grid>
                         <Grid item xs={6} display='flex' justifyContent="center" marginBottom='10%'>
                                 <Card>
-                                        <CardActionArea href="#">
+                                        <Link to='/produto/1' className='text-decoration-none'>
+                                        <CardActionArea>
                                                 <CardMedia
                                                         component="img"
                                                         height="350"
@@ -105,11 +111,13 @@ function Home() {
                                                         </Typography>
                                                 </CardContent>
                                         </CardActionArea>
+                                        </Link>
                                 </Card>
                         </Grid>
                         <Grid item xs={6} display='flex' justifyContent="center" marginBottom='10%'>
                                 <Card>
-                                        <CardActionArea href="#">
+                                        <Link to='/produto/9' className='text-decoration-none'>
+                                        <CardActionArea >
                                                 <CardMedia
                                                         component="img"
                                                         height="350"
@@ -125,6 +133,7 @@ function Home() {
                                                         </Typography>
                                                 </CardContent>
                                         </CardActionArea>
+                                        </Link>
                                 </Card>
                         </Grid>
                 </Grid>
