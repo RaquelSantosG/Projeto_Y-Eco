@@ -17,7 +17,7 @@ function CarouselPostagemComponent(): JSX.Element {
   ])
   return (
 <Grid item xs={8} container justifyContent="center">
-<Carousel isRTL={false} enableAutoPlay autoPlaySpeed={5500}>
+<Carousel isRTL={false} enableAutoPlay autoPlaySpeed={15500}>
 {items.map(item => <div key={item.id}>
   <Box display="flex" justifyContent="center" flexWrap = 'wrap'>
 <img src={item.img} alt="" width="100%" height="400px"/>
