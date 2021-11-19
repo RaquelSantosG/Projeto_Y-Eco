@@ -1,4 +1,4 @@
-import Img1 from './asset/Imgs/Thumbnail3.jpeg';
+import Img1 from './asset/Imgs/Thumbnail4.jpeg';
 import Img2 from './asset/Imgs/Thumbnail2.jpeg';
 
 export const images = [{img: Img1} ,
