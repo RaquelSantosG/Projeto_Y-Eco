@@ -15,5 +15,6 @@
     text-decoration: none;
 }
 .botao{
-    background-color: #00363a;
+    background-color: #00363a !important ;
+    color: white !important;
 }

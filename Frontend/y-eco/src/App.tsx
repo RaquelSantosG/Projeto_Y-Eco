@@ -18,6 +18,8 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import DetalhesFrete from "./pages/frete/DetalhesFrete";
+import Carrossel from './pages/home/Carrossel';
 
 function App() {
   return (
@@ -41,6 +43,11 @@ function App() {
           <Route path='/home'>
             <Home />
           </Route>
+
+          <Route path='/frete'>
+            <DetalhesFrete />
+          </Route>
+
 
           <Route exact path='/'>
             <Login />
