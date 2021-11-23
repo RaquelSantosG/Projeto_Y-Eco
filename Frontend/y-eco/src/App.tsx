@@ -21,6 +21,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import UsuarioCategoria from './components/usuarioCategoria/UsuarioCategoria';
 import UsuarioProduto from './components/usuarioProduto/UsuarioProduto';
 import TelaProdutoAdm from './components/produto/TelaProdutoadm/TelaProdutoAdm';
+import DetalhesFrete from './pages/frete/DetalhesFrete';
 
 
 function App() {
@@ -45,6 +46,11 @@ function App() {
           <Route path='/home'>
             <Home />
           </Route>
+
+          <Route path='/frete'>
+            <DetalhesFrete />
+          </Route>
+
 
           <Route exact path='/'>
             <Login />

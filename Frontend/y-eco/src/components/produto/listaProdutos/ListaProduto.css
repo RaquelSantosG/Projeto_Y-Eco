@@ -26,6 +26,7 @@
 .fontListaProduto{
     text-align: justify;
     font-size: 20px !important;
+    padding: 20px;
 }
 
 .tamanhoBox{
