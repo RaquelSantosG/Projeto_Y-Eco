@@ -19,6 +19,8 @@ import store from './store/store';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import UsuarioCategoria from './components/usuarioCategoria/UsuarioCategoria';
+import UsuarioProduto from './components/usuarioProduto/UsuarioProduto';
+import TelaProdutoAdm from './components/produto/TelaProdutoadm/TelaProdutoAdm';
 
 
 function App() {
@@ -60,8 +62,12 @@ function App() {
             <UsuarioCategoria />
           </Route>
 
-          <Route path='/produtos'>
+          <Route path='/admprodutos'>
             <ListaProduto />
+          </Route>
+
+          <Route path='/produtos'>
+            <UsuarioProduto />
           </Route>
 
           <Route exact path='/formularioProduto'>
@@ -90,6 +96,10 @@ function App() {
 
           <Route path='/produto/:id'>
             <TelaProduto />
+          </Route>
+
+          <Route path='/admproduto/:id'>
+            <TelaProdutoAdm />
           </Route>
 
         </div>
