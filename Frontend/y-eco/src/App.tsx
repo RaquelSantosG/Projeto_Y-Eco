@@ -18,6 +18,7 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UsuarioCategoria from './components/usuarioCategoria/UsuarioCategoria';
 
 
 function App() {
@@ -51,8 +52,12 @@ function App() {
             <Sobre />
           </Route>
           
-          <Route path='/categoria'>
+          <Route path='/admcategoria'>
             <ListaCategoria />
+          </Route>
+
+          <Route path='/categoria'>
+            <UsuarioCategoria />
           </Route>
 
           <Route path='/produtos'>
