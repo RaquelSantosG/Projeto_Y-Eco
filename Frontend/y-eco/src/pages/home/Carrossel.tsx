@@ -8,6 +8,7 @@ import { useHistory } from 'react-router';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 
 
@@ -51,8 +52,8 @@ function Carrossel(): JSX.Element {
 {items.map(item => <div key={item.id}>
   <Box display="flex" justifyContent="center" flexWrap = 'wrap'>
 <img src={item.img} alt="" width="100%" height="100%"/>
- <a className='text-decoration-none2' href={item.botaocliqueaqui} >
- <Button className='botaoCar' variant="contained" size='large' >CLIQUE E SAIBA MAIS</Button></a>
+ <Link className='text-decoration-none2' to={item.botaocliqueaqui}>
+ <Button className='botaoCar' variant="contained" size='large' >CLIQUE E SAIBA MAIS</Button></Link>
   </Box>
   
 </div>)}

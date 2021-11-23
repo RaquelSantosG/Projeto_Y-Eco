@@ -87,8 +87,10 @@ function Home() {
                                                                        Linda e prática!
                                                                 </Typography>
                                                                 <Typography variant="body2">
-                                                                        R$14,99 | R$9,99
+                                                                <span className='textoRiscado'>R$29,99 |</span>  R$14,00 
                                                                 </Typography>
+                                
+                                        
                                                         </CardContent>
                                                 </CardActionArea>
                                         </Link>

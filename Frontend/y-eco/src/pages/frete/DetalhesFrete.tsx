@@ -37,7 +37,7 @@ import { TokenState } from '../../store/tokens/tokensReducer';
         <Grid container item xs={12} justifyContent="center">
             <Grid item xs={6} alignItems='center'>
                 <Box display="flex" justifyContent="center" flexWrap='wrap'>
-                    <a href="https://cdn.discordapp.com/attachments/882496817550483510/912391175351197716/FreteBrasil_final.jpg"></a>
+                <img src="https://cdn.discordapp.com/attachments/882496817550483510/912391175351197716/FreteBrasil_final.jpg" />
                 </Box>
             </Grid>
         </Grid>
