@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core';
 import './Carrossel.css';
 import Carrossel from './Carrossel';
-import Carousel from 'react-elastic-carousel'
 import { Grid } from '@mui/material';
 import { useHistory } from 'react-router';
 import { useSelector } from 'react-redux';
@@ -64,6 +63,9 @@ function Home() {
                                                                 <Typography variant="body2" color="textSecondary">
                                                                         Temos várias cores para você escolher!
                                                                 </Typography>
+                                                                <Typography variant="body2" >
+                                                                    <span className='textValor'>R$14.00</span> | R$9.00 
+                                                                </Typography>
                                                         </CardContent>
                                                 </CardActionArea>
                                         </Link>
@@ -71,7 +73,7 @@ function Home() {
                         </Grid>
                         <Grid item xs={4} display='flex' justifyContent="center" >
                                 <Card>
-                                        <Link to='/produto/4' className='text-decoration-none'>
+                                        <Link to='/produto/23' className='text-decoration-none'>
                                                 <CardActionArea >
                                                         <CardMedia
                                                                 component="img"
@@ -86,11 +88,9 @@ function Home() {
                                                                 <Typography variant="body2" color="textSecondary">
                                                                        Linda e prática!
                                                                 </Typography>
-                                                                <Typography variant="body2">
-                                                                <span className='textoRiscado'>R$29,99 |</span>  R$14,00 
+                                                                <Typography variant="body2" >
+                                                                    <span className='textValor'>R$34.00</span> | R$19.00 
                                                                 </Typography>
-                                
-                                        
                                                         </CardContent>
                                                 </CardActionArea>
                                         </Link>
@@ -113,6 +113,9 @@ function Home() {
                                                                 </Typography>
                                                                 <Typography variant="body2" color="textSecondary">
                                                                         O clássico filtro barro para sua casa!
+                                                                </Typography>
+                                                                <Typography variant="body2" >
+                                                                    <span className='textValor'>R$74.00</span> | R$59.00 
                                                                 </Typography>
                                                         </CardContent>
                                                 </CardActionArea>
@@ -142,6 +145,9 @@ function Home() {
                                                                 <Typography variant="body2" color="textSecondary">
                                                                         Design rústico e funcional.
                                                                 </Typography>
+                                                                <Typography variant="body2" >
+                                                                    <span className='textValor'>R$24.00</span> | R$15.00 
+                                                                </Typography>
                                                         </CardContent>
                                                 </CardActionArea>
                                         </Link>
@@ -149,7 +155,7 @@ function Home() {
                         </Grid>
                         <Grid item xs={4} display='flex' justifyContent="center">
                                 <Card>
-                                        <Link to='/produto/1' className='text-decoration-none'>
+                                        <Link to='/produto/25' className='text-decoration-none'>
                                                 <CardActionArea>
                                                         <CardMedia
                                                                 component="img"
@@ -163,6 +169,9 @@ function Home() {
                                                                 </Typography>
                                                                 <Typography variant="body2" color="textSecondary">
                                                                         Otima opção para brindes.
+                                                                </Typography>
+                                                                <Typography variant="body2" >
+                                                                    <span className='textValor'>R$14.00</span> | R$9.00 
                                                                 </Typography>
                                                         </CardContent>
                                                 </CardActionArea>
@@ -185,6 +194,9 @@ function Home() {
                                                                 </Typography>
                                                                 <Typography variant="body2" color="textSecondary">
                                                                         Adquira seu kit e ganhe uma escovinha Stainless.
+                                                                </Typography>
+                                                                <Typography variant="body2" >
+                                                                    <span className='textValor'>R$24.00</span> | R$11.00 
                                                                 </Typography>
                                                         </CardContent>
                                                 </CardActionArea>

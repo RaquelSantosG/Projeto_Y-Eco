@@ -72,7 +72,8 @@
     width: 50%;
     height: 150%;
 }
-
-.textoRiscado{
-    text-decoration: line-through !important;
+.textValor{
+    text-decoration: line-through;
+    color: red !important;
+    ;
 }

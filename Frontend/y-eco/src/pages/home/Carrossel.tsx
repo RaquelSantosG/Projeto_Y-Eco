@@ -52,7 +52,7 @@ function Carrossel(): JSX.Element {
 {items.map(item => <div key={item.id}>
   <Box display="flex" justifyContent="center" flexWrap = 'wrap'>
 <img src={item.img} alt="" width="100%" height="100%"/>
- <Link className='text-decoration-none2' to={item.botaocliqueaqui}>
+<Link to={item.botaocliqueaqui} className='text-decoration-none2' >
  <Button className='botaoCar' variant="contained" size='large' >CLIQUE E SAIBA MAIS</Button></Link>
   </Box>
   

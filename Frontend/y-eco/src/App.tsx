@@ -25,6 +25,16 @@ function App() {
   return (
     
     <div className = 'imagemBack'>
+       
+  <div className="icones col-sm-12 " >
+   
+     <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5511961787592">
+  
+       <img className="tamIcone" src="https://cdn.discordapp.com/attachments/882496817550483510/902932848124788736/whatsapp.png" alt="botão de compartilhamento whatsapp" title="Precisa de ajuda? Clique aqui"/>
+   
+     </a>
+   
+   </div> 
     <Provider store={store}>
       <ToastContainer />
     <Router>
