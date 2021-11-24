@@ -33,7 +33,7 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
-        <div style={{minHeight: '100vh'}} >
+        <div className='App-Div-Principal'>
           
           <Route  path='/cadastrar'>
             <CadastroUsuario />

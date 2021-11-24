@@ -82,17 +82,13 @@ function UsuarioProduto() {
 
                   
                     <Box mx={3}>
-                      {/* <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                        atualizar
-                      </Button> */}
+                      
                       <ShoppingBagOutlinedIcon fontSize='large'/>
                     </Box>
                   
                   
                     <Box mx={3}>
-                      {/* <Button variant="contained" size='small' color="secondary">
-                        deletar
-                      </Button> */}
+                      
                       <ShoppingCartOutlinedIcon fontSize='large'/> 
                     </Box>
             

@@ -48,13 +48,20 @@ function ListaProduto() {
 
   return (
     <>
+    <Box className='btCadastro'>
+        <Link to={`/formularioProduto`} className="text-decorator-none" >
+          <Button variant="contained" size='medium' color="primary" className='btCadastro'>
+            Cadastrar novo produto
+          </Button>
+        </Link>
+      </Box>
       <Box className='principalBox'>
         {
           produto.map(produto =>(
           <Box m={2} >
             
             <Card className = "cardProduto" variant="outlined">
-            <Link to={`/produto/${produto.id}`} className="text-decorator-none">
+            <Link to={`/admproduto/${produto.id}`} className="text-decorator-none">
               <CardContent>
                 <Box>
                       <img className='imgProduto' src={produto.img} /> 
