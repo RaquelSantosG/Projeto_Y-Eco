@@ -13,6 +13,10 @@
     color: white !important;
 }
 
-.textos {
+.textosFooter {
     color: white !important;
+}
+
+.text-decoration-none{
+    text-decoration: none;
 }
