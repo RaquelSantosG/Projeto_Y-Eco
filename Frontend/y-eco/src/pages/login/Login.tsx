@@ -2,68 +2,86 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Grid, Box, Typography, TextField, Button } from '@material-ui/core';
 import { Link, useHistory } from 'react-router-dom';
 
-import { login } from '../../services/Service';
-import UserLogin from '../../models/UserLogin';
-import { useDispatch } from 'react-redux';
-import { addToken } from '../../store/tokens/actions';
+
+
 import './Login.css';
 import { toast } from 'react-toastify';
+import { useDispatch } from 'react-redux';
+import UserLogin from '../../models/UserLogin';
+import { addTipo, addToken } from '../../store/user/actions';
+import { login } from '../../services/Service';
+
 
 function Login() {
     let history = useHistory();
     const dispatch = useDispatch();
-    const [token, setToken] = useState('');
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
             usuario: '',
+            tipo: '',
             senha: '',
             token: ''
         }
-        )
+    )
 
-        function updatedModel(e: ChangeEvent<HTMLInputElement>) {
-
-            setUserLogin({
-                ...userLogin,
-                [e.target.name]: e.target.value
-            })
+    const [respUserLogin, setRespUserLogin] = useState<UserLogin>(
+        {
+            id: 0,
+            usuario: '',
+            tipo: '',
+            senha: '',
+            token: ''
         }
+    )
 
-            useEffect(()=>{
-                if(token != ''){
-                    dispatch(addToken(token))
-                    history.push('/home')
-                }
-            }, [token])
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
 
-        async function onSubmit(e: ChangeEvent<HTMLFormElement>){
-            e.preventDefault();
-            try{
-                await login(`/usuarios/logar`, userLogin, setToken)
-                toast.success('Usuário logado com sucesso!', {
-                    position: 'top-right',
-                    autoClose: 2000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: false,
-                    theme: 'colored',
-                    progress: undefined,
-                });
-            }catch(error){
-                toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
-                    position: 'top-right',
-                    autoClose: 2000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: false,
-                    theme: 'colored',
-                    progress: undefined,
-                });
-            }
+        setUserLogin({
+            ...userLogin,
+            [e.target.name]: e.target.value
+        })
+    }
+
+
+
+    useEffect(() => {
+       
+        if (respUserLogin.token != '') {
+            dispatch(addToken(respUserLogin.token));
+            dispatch(addTipo(respUserLogin.tipo));
+            history.push('/home')
         }
+    }, [respUserLogin.token])
+    
+
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault();
+        try {
+            await login(`/usuarios/logar`, userLogin, setRespUserLogin)
+            toast.success('Usuário logado com sucesso!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+        } catch (error) {
+            toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+        }
+    }
 
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>

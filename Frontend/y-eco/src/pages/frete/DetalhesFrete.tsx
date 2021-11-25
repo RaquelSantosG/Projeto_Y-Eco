@@ -4,12 +4,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import { toast } from 'react-toastify';
 import { busca } from '../../services/Service';
-import { addToken } from '../../store/tokens/actions';
-import { TokenState } from '../../store/tokens/tokensReducer';
+import { addToken } from '../../store/user/actions';
+import { UserState } from '../../store/user/userReducer';
+
 
  function DetalhesFrete() {
 
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     );
       let history = useHistory();

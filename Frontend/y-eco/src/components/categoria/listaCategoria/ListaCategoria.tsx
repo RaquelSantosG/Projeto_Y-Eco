@@ -7,14 +7,14 @@ import useLocalStorage from 'react-use-localstorage';
 import { useHistory } from 'react-router-dom';
 import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 import { Grid, Box } from '@mui/material';
+import { UserState } from '../../../store/user/userReducer';
 
 
 function ListaCategoria() {
   const [categorias, setCategoria] = useState<Categoria[]>([])
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
   let history = useHistory();

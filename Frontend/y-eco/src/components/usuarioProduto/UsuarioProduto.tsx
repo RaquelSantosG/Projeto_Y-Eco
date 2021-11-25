@@ -6,16 +6,16 @@ import useLocalStorage from 'react-use-localstorage';
 import { BorderClear } from '@material-ui/icons';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { TokenState } from '../../store/tokens/tokensReducer';
 import { busca } from '../../services/Service';
 import Produto from '../../models/Produto';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import { UserState } from '../../store/user/userReducer';
 
 function UsuarioProduto() {
 
   const [produto, setProduto] = useState<Produto[]>([])
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
 );
   let history = useHistory();

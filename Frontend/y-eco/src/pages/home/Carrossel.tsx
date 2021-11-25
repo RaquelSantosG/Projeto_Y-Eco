@@ -6,15 +6,15 @@ import './Carrossel.css';
 import Carousel from 'react-elastic-carousel'
 import { useHistory } from 'react-router';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
+import { UserState } from '../../store/user/userReducer';
 
 
 
 function Carrossel(): JSX.Element {
 
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
 );
   let history = useHistory();

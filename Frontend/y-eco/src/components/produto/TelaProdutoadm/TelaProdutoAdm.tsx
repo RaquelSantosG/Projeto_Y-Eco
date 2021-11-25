@@ -3,13 +3,11 @@ import { Link, useHistory, useParams } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './TelaProdutoAdm.css';
 import Produto from '../../../models/Produto';
-
-
 import { busca, buscaId } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import { UserState } from '../../../store/user/userReducer';
 
 
 function TelaProdutoAdm() {
@@ -17,7 +15,7 @@ function TelaProdutoAdm() {
   let history = useHistory();
   const { id } = useParams<{ id: string }>();
   const [categorias, setCategorias] = useState<Categoria[]>([])
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
 );
 

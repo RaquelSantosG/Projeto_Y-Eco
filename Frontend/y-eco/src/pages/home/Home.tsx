@@ -7,13 +7,13 @@ import Carousel from 'react-elastic-carousel'
 import { Grid } from '@mui/material';
 import { useHistory } from 'react-router';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
+import { UserState } from '../../store/user/userReducer';
 
 function Home() {
 
-        const token = useSelector<TokenState, TokenState["tokens"]>(
+        const token = useSelector<UserState, UserState["tokens"]>(
                 (state) => state.tokens
             );
               let history = useHistory();
@@ -159,7 +159,7 @@ function Home() {
                                                         />
                                                         <CardContent>
                                                                 <Typography gutterBottom variant="h5" component="div">
-                                                                        Garrafa de Fibra de Côco
+                                                                        Garrafa de Fibra de Coco
                                                                 </Typography>
                                                                 <Typography variant="body2" color="textSecondary">
                                                                         Otima opção para brindes.

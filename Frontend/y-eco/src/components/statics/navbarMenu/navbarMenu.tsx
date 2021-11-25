@@ -42,4 +42,4 @@ import { Link } from 'react-router-dom';
   );
 }
 
-export default BasicMenu
+export default BasicMenu;
