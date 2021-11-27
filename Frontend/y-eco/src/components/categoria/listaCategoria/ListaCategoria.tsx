@@ -59,14 +59,11 @@ function ListaCategoria() {
         </Link>
       </Box>
 
-      <Grid container justifyContent="center" alignItems="center" >
         <Box className='principalBox2'>
           {
             categorias.map(categoria => (
-              <Box m={3}>
-                <Box display="flex">
-                  <Box padding={2}>
-                    <Card variant="outlined" className='card2'>
+                  <Box >
+                    <Card variant="outlined" className='card3'>
                       <CardContent>
                         <Typography variant="h4" component="h4">
                           {categoria.nome}
@@ -90,7 +87,7 @@ function ListaCategoria() {
                             </Link>
                           </Box>
 
-                          <Link to={`/deletarCategoria/${categoria.id}`} className="text-decorator-none2">
+                          <Link to={`/deletarCategoria/${categoria.id}`} className="text-decorator-none">
                             <Box mx={1} display="flex" justifyContent="center">
                               <Button variant="contained" size='small' color="secondary" className='botao2' >
                                 deletar
@@ -101,12 +98,10 @@ function ListaCategoria() {
                       </CardActions>
                     </Card>
                   </Box>
-                </Box>
-              </Box>
             ))
           }
         </Box>
-      </Grid>
+      
 
     </>
   );

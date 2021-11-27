@@ -29,7 +29,7 @@ function App() {
     
     <div className = 'imagemBack'>
        
-  <div className="icones col-sm-12 " >
+  {/* <div className="icones col-sm-12 " >
    
      <a href="https://linktr.ee/GrupoYEco" target='_blank'>
   
@@ -37,7 +37,7 @@ function App() {
    
      </a>
    
-   </div> 
+   </div>  */}
     <Provider store={store}>
       <ToastContainer />
     <Router>

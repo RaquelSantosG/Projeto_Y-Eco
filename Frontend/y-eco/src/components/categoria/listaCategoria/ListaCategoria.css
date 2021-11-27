@@ -1,31 +1,3 @@
-.text-decorator-none2{
-    text-decoration: none;
-    color: black !important;
-}
-
-.card2{
- color: black;
- width: 400px;
-}
-
-.border-image2{
- border-radius: 20px;
-}
-
-.imgProduto2{
-    height: 200px;
-    width: 200px;
-}
-
-.cardProduto2{
-    width: 250px;
-    height: 540px;
-}
-
-.fontListaProduto2{
-    text-align: justify;
-    font-size: 20px !important;
-}
 
 .tamanhoBox2{
     height: 30px;
@@ -33,14 +5,36 @@
     display: flex;
 }
 
-.principalBox2{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    padding-left: 250px;
-    padding-right: 250px;
+.card3{
+    color: black;
+    width: 358px;
+    min-height:239px;
+   }
+   
+   .principalBox2{
+       display: grid;
+       grid-template-columns:repeat(auto-fill, minmax(358px, 1fr));
+       gap:15px;
+       place-items: center;
+       justify-content: center;
+       align-content: center;
+       margin-top: 20px;
+   }
+   
+   @media(min-width:350px){
+    .principalBox2{
+        margin-bottom: 20px;
+
+    }
+
+   @media(min-width:1441px){
+       .principalBox2{
+           grid-template-columns:repeat(3, 1fr);
+   
+       }
+   }
+
+   
 }
 
 .btCadastro{

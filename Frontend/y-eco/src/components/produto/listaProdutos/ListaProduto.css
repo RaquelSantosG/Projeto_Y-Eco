@@ -36,13 +36,21 @@
 }
 
 .principalBox{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:15px;
+    place-items: center;
     justify-content: center;
     align-content: center;
     min-height: 100vh;
-    padding-left: 250px;
-    padding-right: 250px;
+    margin: 20px 0;
+}
+
+@media(min-width:1441px){
+    .principalBox{
+        grid-template-columns:repeat(4, 1fr);
+
+    }
 }
 
 .btCadastro{

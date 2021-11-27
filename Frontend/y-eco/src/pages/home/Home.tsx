@@ -9,44 +9,63 @@ import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import { UserState } from '../../store/user/userReducer';
+import { styled, createTheme, ThemeProvider } from '@mui/system';
+
+
+
+
+const Iframe = styled('iframe')(({ theme }) => ({
+        maxWidth:'100%',
+        height:'100%',
+        minHeight:'250px',
+        width:'100%'
+}));
+
+
+
+
 
 function Home() {
 
         const token = useSelector<UserState, UserState["tokens"]>(
                 (state) => state.tokens
-            );
-              let history = useHistory();
-            
-              useEffect(() => {
+        );
+        let history = useHistory();
+
+        useEffect(() => {
                 if (token == "") {
-                  toast.error('Você precisa estar logado', {
-                    position: 'top-right',
-                    autoClose: 2000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: false,
-                    theme: 'colored',
-                    progress: undefined,
-                });
-                  history.push("/login")
-            
+                        toast.error('Você precisa estar logado', {
+                                position: 'top-right',
+                                autoClose: 2000,
+                                hideProgressBar: false,
+                                closeOnClick: true,
+                                pauseOnHover: false,
+                                draggable: false,
+                                theme: 'colored',
+                                progress: undefined,
+                        });
+                        history.push("/login")
+
                 }
-              }, [token])
-            
+        }, [token])
+
 
         return (
-                <Grid container >
-                        <Grid item xs={12} display='flex' justifyContent="center" padding ='5%'>
-                                <Carrossel/>
+                <Grid container spacing={5}>
+                        <Grid item xs={12} display='flex' justifyContent="center" padding='5%'>
+                                <Carrossel />
                         </Grid>
+
                         <Grid container item xs={12} display='flex' justifyContent="center" padding='5%' >
-                        <Grid item xs={12} display='flex' justifyContent='center' alignItems="center">
-                                <Box paddingTop={1} display='flex' justifyContent='center' alignItems='center' className='title' > <Typography variant="h4" align="center" gutterBottom className='textosHome' >Mais Vendidos</Typography>
-                                </Box>
+                                <Grid item xs={12} display='flex' justifyContent='center' alignItems="center">
+                                        <Box paddingTop={1} display='flex' justifyContent='center' alignItems='center' className='title' > <Typography variant="h4" align="center" gutterBottom className='textosHome' >Mais Vendidos</Typography>
+                                        </Box>
+                                </Grid>
                         </Grid>
-                        </Grid>
-                        <Grid item xs={4} display='flex' justifyContent="center" >
+
+                       
+
+                        <Grid item xs={12} sm={4} display='flex' justifyContent="center" >
                                 <Card>
                                         <Link to='/produto/4' className='text-decoration-none'>
                                                 <CardActionArea >
@@ -64,14 +83,15 @@ function Home() {
                                                                         Temos várias cores para você escolher!
                                                                 </Typography>
                                                                 <Typography variant="body2" >
-                                                                    <span className='textValor'>R$14.00</span> | R$9.00 
+                                                                        <span className='textValor'>R$14.00</span> | R$9.00
                                                                 </Typography>
                                                         </CardContent>
                                                 </CardActionArea>
                                         </Link>
                                 </Card>
                         </Grid>
-                        <Grid item xs={4} display='flex' justifyContent="center" >
+
+                        <Grid item xs={12} sm={4} display='flex' justifyContent="center" >
                                 <Card>
                                         <Link to='/produto/23' className='text-decoration-none'>
                                                 <CardActionArea >
@@ -86,10 +106,10 @@ function Home() {
                                                                         Garrafa de Madeira
                                                                 </Typography>
                                                                 <Typography variant="body2" color="textSecondary">
-                                                                       Linda e prática!
+                                                                        Linda e prática!
                                                                 </Typography>
                                                                 <Typography variant="body2" >
-                                                                    <span className='textValor'>R$34.00</span> | R$19.00 
+                                                                        <span className='textValor'>R$34.00</span> | R$19.00
                                                                 </Typography>
                                                         </CardContent>
                                                 </CardActionArea>
@@ -97,7 +117,9 @@ function Home() {
                                 </Card>
                         </Grid>
 
-                        <Grid item xs={4} display='flex' justifyContent="center">
+                        
+
+                        <Grid item xs={12} sm={4} display='flex' justifyContent="center">
                                 <Card>
                                         <Link to='/produto/3' className='text-decoration-none'>
                                                 <CardActionArea >
@@ -115,20 +137,23 @@ function Home() {
                                                                         O clássico filtro barro para sua casa!
                                                                 </Typography>
                                                                 <Typography variant="body2" >
-                                                                    <span className='textValor'>R$74.00</span> | R$59.00 
+                                                                        <span className='textValor'>R$74.00</span> | R$59.00
                                                                 </Typography>
                                                         </CardContent>
                                                 </CardActionArea>
                                         </Link>
                                 </Card>
                         </Grid>
+
+                        
+
                         <Grid container item xs={12} display='flex' justifyContent="center" padding='5%'>
-                        <Grid item xs={12} display='flex' justifyContent='center' alignItems="center" >
-                                <Box paddingTop={1} display='flex' justifyContent='center' alignItems='center' className='title'> <Typography variant="h4" align="center" gutterBottom className='textosHome' >Destaques da Semana</Typography>
-                                </Box>
+                                <Grid item xs={12} display='flex' justifyContent='center' alignItems="center" >
+                                        <Box paddingTop={1} display='flex' justifyContent='center' alignItems='center' className='title'> <Typography variant="h4" align="center" gutterBottom className='textosHome' >Destaques da Semana</Typography>
+                                        </Box>
+                                </Grid>
                         </Grid>
-                        </Grid>
-                        <Grid item xs={4} display='flex' justifyContent="center">
+                        <Grid item  xs={12} sm={4} display='flex' justifyContent="center">
                                 <Card>
                                         <Link to='/produto/1' className='text-decoration-none'>
                                                 <CardActionArea>
@@ -146,14 +171,14 @@ function Home() {
                                                                         Design rústico e funcional.
                                                                 </Typography>
                                                                 <Typography variant="body2" >
-                                                                    <span className='textValor'>R$24.00</span> | R$15.00 
+                                                                        <span className='textValor'>R$24.00</span> | R$15.00
                                                                 </Typography>
                                                         </CardContent>
                                                 </CardActionArea>
                                         </Link>
                                 </Card>
                         </Grid>
-                        <Grid item xs={4} display='flex' justifyContent="center">
+                        <Grid item  xs={12} sm={4} display='flex' justifyContent="center">
                                 <Card>
                                         <Link to='/produto/25' className='text-decoration-none'>
                                                 <CardActionArea>
@@ -171,14 +196,14 @@ function Home() {
                                                                         Otima opção para brindes.
                                                                 </Typography>
                                                                 <Typography variant="body2" >
-                                                                    <span className='textValor'>R$14.00</span> | R$9.00 
+                                                                        <span className='textValor'>R$14.00</span> | R$9.00
                                                                 </Typography>
                                                         </CardContent>
                                                 </CardActionArea>
                                         </Link>
                                 </Card>
                         </Grid>
-                        <Grid item xs={4} display='flex' justifyContent="center" >
+                        <Grid item  xs={12} sm={4} display='flex' justifyContent="center" >
                                 <Card>
                                         <Link to='/produto/9' className='text-decoration-none'>
                                                 <CardActionArea >
@@ -196,7 +221,7 @@ function Home() {
                                                                         Adquira seu kit e ganhe uma escovinha Stainless.
                                                                 </Typography>
                                                                 <Typography variant="body2" >
-                                                                    <span className='textValor'>R$24.00</span> | R$11.00 
+                                                                        <span className='textValor'>R$24.00</span> | R$11.00
                                                                 </Typography>
                                                         </CardContent>
                                                 </CardActionArea>
@@ -205,21 +230,21 @@ function Home() {
                         </Grid>
 
 
-                        <Grid container justifyContent="center" padding='5%'>
-                               <Grid item xs={12} display='flex' justifyContent='center' alignItems="center" >
-                                <Box paddingTop={1} display='flex' justifyContent='center' alignItems='center' className='title' marginBottom='10%'> <Typography variant="h4" align="center" gutterBottom className='textosHome' >Assista ao vídeo e saiba mais</Typography>
-                                </Box>
-                        </Grid>
-                                        <Grid  item xs={6}>                 
-                                        <iframe  width="600" height="400" src="https://www.youtube.com/embed/ydH9YpoxpsI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                                        </Grid>
-                                        <Grid item xs={6}>
-                                        <img src="https://cdn.discordapp.com/attachments/882496817550483510/911090453703712838/Desenho_sem_titulo_25.png" alt=""width="600" height="400"/>
-                                        </Grid>
+                        <Grid container justifyContent="center" padding='5%' >
+                                <Grid item xs={12} display='flex' justifyContent='center' alignItems="center" >
+                                        <Box paddingTop={1} display='flex' justifyContent='center' alignItems='center' className='title' marginBottom='10%'> <Typography variant="h4" align="center" gutterBottom className='textosHome' >Assista ao vídeo e saiba mais</Typography>
+                                        </Box>
                                 </Grid>
-
+                                <Grid xs={12} sm={6} >
+                                        <Iframe  src="https://www.youtube.com/embed/ydH9YpoxpsI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/>
+                                </Grid>
+                                <Grid item xs={12} sm={6}>
+                                        <img src="https://cdn.discordapp.com/attachments/882496817550483510/911090453703712838/Desenho_sem_titulo_25.png"  width={'100%'} height={'100%'} />
+                                </Grid>
                         </Grid>
-                
+
+                </Grid>
+
 
 
 

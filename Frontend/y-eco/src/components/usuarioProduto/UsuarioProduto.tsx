@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box, Card, CardActions, CardContent, Button, Typography,Grid } from '@material-ui/core';
 import './UsuarioProduto.css';
 import useLocalStorage from 'react-use-localstorage';
 import { BorderClear } from '@material-ui/icons';
@@ -52,7 +52,7 @@ function UsuarioProduto() {
       <Box className='principalBox'>
         {
           produto.map(produto =>(
-          <Box m={2} >
+          <Box >
             
             <Card className = "cardProduto" variant="outlined">
             <Link to={`/produto/${produto.id}`} className="text-decorator-none">
@@ -66,7 +66,6 @@ function UsuarioProduto() {
                 </Typography>
                 </Box>
                
-                
                 <Typography  variant="body1" component="p" className='fontListaProduto'>
                   {produto.quantidade} unidades
                 </Typography>

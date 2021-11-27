@@ -50,38 +50,32 @@ function UsuarioCategoria() {
 
   return (
     <>
-   <Grid container  justifyContent="center" alignItems="center" >
       <Box className='principalBox2'>
         {
           categorias.map(categoria => (
-            <Box m={3}>
-              <Box display="flex">
-              <Box padding={2}>
-                  <Card variant="outlined" className = 'card2'>
-                    <CardContent>
-                      <Typography variant="h4" component="h4">
-                        {categoria.nome}
-                      </Typography>
-                      <Typography variant="h5" component="h5" >
-                        {categoria.setor}
-                      </Typography>
-                      <Typography variant="h5" component="h5" >
-                        {categoria.tipo}
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Box display="flex" justifyContent="center" mb={1.5}>
-                      </Box>
-                    </CardActions>
-                  </Card>
-                </Box>
-              </Box>
+            
+            <Box>
+              <Card variant="outlined" className="card2">
+                <CardContent>
+                  <Typography variant="h4" component="h4">
+                    {categoria.nome}
+                  </Typography>
+                  <Typography variant="h5" component="h5" >
+                    {categoria.setor}
+                  </Typography>
+                  <Typography variant="h5" component="h5" >
+                    {categoria.tipo}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Box display="flex" justifyContent="center" mb={1.5}>
+                  </Box>
+                </CardActions>
+              </Card>
             </Box>
           ))
         }
       </Box>
-      </Grid>
-
     </>
   );
 }
