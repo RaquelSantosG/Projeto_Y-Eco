@@ -50,7 +50,7 @@ function DeletarProduto() {
         }
 
         function sim() {
-            history.push('/produtos')
+            history.push('/admprodutos')
             deleteId(`/produto/${id}`, {
               headers: {
                 'Authorization': token
@@ -69,7 +69,7 @@ function DeletarProduto() {
           }
         
           function nao() {
-            history.push('/produtos')
+            history.push('/admprodutos')
           }
   
           

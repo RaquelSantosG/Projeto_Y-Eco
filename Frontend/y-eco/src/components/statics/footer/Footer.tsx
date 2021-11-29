@@ -16,16 +16,16 @@ function Footer() {
                             <Typography variant="h5" align="center" gutterBottom className='textosFooter'>Sigam-nos nas redes sociais </Typography>
                         </Box>
                         <Box display="flex" alignItems="center" justifyContent="center">
-                            <a href="https://www.facebook.com/generationbrasil" target="_blank">
+                            <a href="https://www.facebook.com/profile.php?id=100075123653628" target="_blank">
                                 <FacebookIcon className='redes' />
                             </a>
-                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
+                            <a href="https://www.instagram.com/projetoyeco/" target="_blank">
                                 <InstagramIcon className='redes' />
                             </a>
                             <a href="https://youtu.be/Fev2MHAa-qo" target="_blank">
                                 <YouTubeIcon className='redes' />
                             </a>
-                            <a href="https://github.com/RaquelSantosG/Projeto_Y-Eco" target="_blank">
+                            <a href="https://github.com/Y-eco/" target="_blank">
                                 <GitHubIcon className='redes' />
                             </a>
                         </Box>

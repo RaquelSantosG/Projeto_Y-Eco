@@ -112,7 +112,7 @@ function Navbar() {
             </Box>
 
     
-            <Box display='flex' justifyContent='end' width='auto' className='boxToolbar'>
+            <Box display='flex' justifyContent='end'  className='boxToolbar2'>
 
             {menuAdm}
 
