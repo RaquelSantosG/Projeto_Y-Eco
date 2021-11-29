@@ -3,17 +3,18 @@
 }
 
 .imagem{
-        background-image: url(https://i.imgur.com/xFvpWBr.gif);
-        background-Repeat: no-repeat; 
-        width: 100vh; 
-        min-height: 100vh; 
-        background-size: cover; 
-        background-position: center;
-    
+    background-image: url(https://i.imgur.com/xFvpWBr.gif);
+    background-Repeat: no-repeat; 
+    width: 100vh; 
+    min-height: 100%; 
+    background-size: cover; 
+    background-position: center;
 }
+
 .text-decorator-none{
     text-decoration: none;
 }
 .botao{
-    background-color: #00363a;
+    background-color: #00363a !important ;
+    color: white !important;
 }

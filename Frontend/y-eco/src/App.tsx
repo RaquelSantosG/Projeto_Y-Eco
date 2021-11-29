@@ -18,17 +18,32 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UsuarioCategoria from './components/usuarioCategoria/UsuarioCategoria';
+import UsuarioProduto from './components/usuarioProduto/UsuarioProduto';
+import TelaProdutoAdm from './components/produto/TelaProdutoadm/TelaProdutoAdm';
+import DetalhesFrete from './pages/frete/DetalhesFrete';
+
 
 function App() {
   return (
     
     <div className = 'imagemBack'>
+       
+   <div className="icones col-sm-12 " >
+   
+     <a href="https://linktr.ee/GrupoYEco" target='_blank'>
+  
+       <img className="tamIcone" src="https://cdn.discordapp.com/attachments/882496817550483510/902932848124788736/whatsapp.png" alt="botão de compartilhamento whatsapp" title="Precisa de ajuda? Clique aqui"/>
+   
+     </a>
+   
+   </div>
     <Provider store={store}>
       <ToastContainer />
     <Router>
       <Navbar />
       <Switch>
-        <div style={{minHeight: '100vh'}} >
+        <div className='App-Div-Principal'>
           
           <Route  path='/cadastrar'>
             <CadastroUsuario />
@@ -42,6 +57,11 @@ function App() {
             <Home />
           </Route>
 
+          <Route path='/frete'>
+            <DetalhesFrete />
+          </Route>
+
+
           <Route exact path='/'>
             <Login />
           </Route>
@@ -50,12 +70,20 @@ function App() {
             <Sobre />
           </Route>
           
-          <Route path='/categoria'>
+          <Route path='/admcategoria'>
             <ListaCategoria />
           </Route>
 
-          <Route path='/produtos'>
+          <Route path='/categoria'>
+            <UsuarioCategoria />
+          </Route>
+
+          <Route path='/admprodutos'>
             <ListaProduto />
+          </Route>
+
+          <Route path='/produtos'>
+            <UsuarioProduto />
           </Route>
 
           <Route exact path='/formularioProduto'>
@@ -84,6 +112,10 @@ function App() {
 
           <Route path='/produto/:id'>
             <TelaProduto />
+          </Route>
+
+          <Route path='/admproduto/:id'>
+            <TelaProdutoAdm />
           </Route>
 
         </div>

@@ -26,7 +26,6 @@
 .fontListaProduto{
     text-align: justify;
     font-size: 20px !important;
-    padding: 20px;
 }
 
 .tamanhoBox{
@@ -45,7 +44,6 @@
     min-height: 100vh;
     margin: 20px 0;
 }
-
 @media(min-width:1441px){
     .principalBox{
         grid-template-columns:repeat(4, 1fr);
@@ -53,10 +51,6 @@
     }
 }
 
-.btCadastro{
-    margin-top: 20px;
-    margin-left: 20px;
-}
 
 
 

@@ -2,11 +2,12 @@ import React, { useState, useEffect, ChangeEvent } from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
 import './CadastroCategoria.css';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
+
 import { buscaId, post, put } from '../../../services/Service';
 import { useHistory, useParams } from 'react-router';
 import Categoria from '../../../models/Categoria';
 import { toast } from 'react-toastify';
+import { UserState } from '../../../store/user/userReducer';
 
 
 
@@ -14,7 +15,7 @@ import { toast } from 'react-toastify';
 function CadastroCategoria() {
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     );
     const [categoria, setCategoria] = useState<Categoria>({

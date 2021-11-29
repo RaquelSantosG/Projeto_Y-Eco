@@ -4,21 +4,36 @@ import { AppBar, Box, Grid, Toolbar, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
-import { addToken } from '../../../store/tokens/actions';
+import { addTipo, addToken } from '../../../store/user/actions';
 import { toast } from 'react-toastify';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+import BasicMenu from '../navbarMenu/navbarMenu';
+import { UserState } from '../../../store/user/userReducer';
 
 
 function Navbar() {
     
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     );
+
+    const name = useSelector<UserState, UserState["names"]>(
+        (state) => state.names
+    );
+    
+    const tipo = useSelector<UserState, UserState["tipos"]>(
+        (state) => state.tipos
+    );
+
     let history = useHistory();
     const dispatch = useDispatch();
 
     function goLogout(){
         dispatch(addToken(''));
+        dispatch(addTipo(''));
         toast.info('Usuário deslogado', {
             position: 'top-right',
             autoClose: 2000,
@@ -34,6 +49,13 @@ function Navbar() {
 
     var navbarComponent;
     var headComponent; 
+    var menuAdm;
+
+    if (tipo == 'Admin') {
+        menuAdm = <Box mx={5} >
+            <BasicMenu />
+        </Box>
+    }
 
     if(token != ''){
         headComponent = 
@@ -50,7 +72,7 @@ function Navbar() {
         navbarComponent = 
         <AppBar position="static">
         <Toolbar className='menu' variant="dense" >
-            <Box display='flex' justifyContent='center' className='boxToolbar'>
+        <Box display='flex' justifyContent='center' className='boxToolbar' flexWrap='wrap'>
 
                 <Link to='/home' className='text-decorator-none'>
                     <Box mx={5} className='cursor'>
@@ -88,7 +110,11 @@ function Navbar() {
                     </Box>
                 </Link>
             </Box>
-            <Box display='flex' justifyContent='end' width='auto' className='boxToolbar'>
+
+    
+            <Box display='flex' justifyContent='end'  className='boxToolbar2'>
+
+            {menuAdm}
 
                     <Box className="ponteiro" display='flex' justifySelf='flex-end' alignItems="center" onClick={goLogout}>
                         <Typography variant="h6" color="inherit">

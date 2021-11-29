@@ -1,0 +1,26 @@
+
+.card2{
+ color: black;
+ width: 358px;
+ min-height:208px;
+}
+
+
+.principalBox2{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(358px, 1fr));
+    gap:15px;
+    place-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+}
+@media(min-width:1441px){
+    .principalBox2{
+        grid-template-columns:repeat(3, 1fr);
+
+    }
+}
+
+
+

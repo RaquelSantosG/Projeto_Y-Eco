@@ -7,8 +7,8 @@ import Produto from '../../../models/Produto';
 import Categoria from '../../../models/Categoria';
 import { post, put, busca, buscaId} from '../../../services/Service';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import { UserState } from '../../../store/user/userReducer';
 
 
 function CadastroProduto() {
@@ -16,7 +16,7 @@ function CadastroProduto() {
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([])
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     );
 
@@ -135,7 +135,7 @@ function CadastroProduto() {
     }
 
     function back() {
-        history.push('/produtos')
+        history.push('/admprodutos')
     }
 
     return (

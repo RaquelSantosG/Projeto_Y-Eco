@@ -3,16 +3,16 @@ import {Box, Card, CardActions, CardContent, Button, Typography} from '@material
 import './DeletarCategoria.css';
 import { useHistory, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
 import { buscaId, deleteId } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 import { toast } from 'react-toastify';
+import { UserState } from '../../../store/user/userReducer';
 
 
 function DeletarCategoria() {
     let history = useHistory();
     const { id } = useParams<{id: string}>();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token = useSelector<UserState, UserState["tokens"]>(
       (state) => state.tokens
   );
     const [categoria, setCategoria] = useState<Categoria>();

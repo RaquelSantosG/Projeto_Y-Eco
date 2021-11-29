@@ -6,14 +6,14 @@ import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
 import Produto from '../../../models/Produto';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import { UserState } from '../../../store/user/userReducer';
 
 
 function DeletarProduto() {
     let history = useHistory();
     const { id } = useParams<{id: string}>();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token = useSelector<UserState, UserState["tokens"]>(
       (state) => state.tokens
   );
     const [produto, setProduto] = useState<Produto>();
@@ -50,7 +50,7 @@ function DeletarProduto() {
         }
 
         function sim() {
-            history.push('/produtos')
+            history.push('/admprodutos')
             deleteId(`/produto/${id}`, {
               headers: {
                 'Authorization': token
@@ -69,7 +69,7 @@ function DeletarProduto() {
           }
         
           function nao() {
-            history.push('/produtos')
+            history.push('/admprodutos')
           }
   
           

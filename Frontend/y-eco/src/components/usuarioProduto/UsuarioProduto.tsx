@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import './ListaProduto.css';
-import Produto from '../../../models/Produto';
+import { Box, Card, CardActions, CardContent, Button, Typography,Grid } from '@material-ui/core';
+import './UsuarioProduto.css';
 import useLocalStorage from 'react-use-localstorage';
-import { busca } from '../../../services/Service';
 import { BorderClear } from '@material-ui/icons';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { UserState } from '../../../store/user/userReducer';
+import { busca } from '../../services/Service';
+import Produto from '../../models/Produto';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import { UserState } from '../../store/user/userReducer';
 
-function ListaProduto() {
+function UsuarioProduto() {
 
   const [produto, setProduto] = useState<Produto[]>([])
   const token = useSelector<UserState, UserState["tokens"]>(
@@ -47,20 +49,13 @@ function ListaProduto() {
 
   return (
     <>
-    <Box className='btCadastro'>
-        <Link to={`/formularioProduto`} className="text-decorator-none" >
-          <Button variant="contained" size='medium' color="primary" className='btCadastro'>
-            Cadastrar novo produto
-          </Button>
-        </Link>
-      </Box>
       <Box className='principalBox'>
         {
           produto.map(produto =>(
-          <Box m={2} >
+          <Box >
             
             <Card className = "cardProduto" variant="outlined">
-            <Link to={`/admproduto/${produto.id}`} className="text-decorator-none">
+            <Link to={`/produto/${produto.id}`} className="text-decorator-none">
               <CardContent>
                 <Box>
                       <img className='imgProduto' src={produto.img} /> 
@@ -71,7 +66,6 @@ function ListaProduto() {
                 </Typography>
                 </Box>
                
-                
                 <Typography  variant="body1" component="p" className='fontListaProduto'>
                   {produto.quantidade} unidades
                 </Typography>
@@ -85,20 +79,18 @@ function ListaProduto() {
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
 
-                  <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none" >
-                    <Box mx={1}>
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                        atualizar
-                      </Button>
+                  
+                    <Box mx={3}>
+                      
+                      <ShoppingBagOutlinedIcon fontSize='large'/>
                     </Box>
-                  </Link>
-                  <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
-                    <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
-                        deletar
-                      </Button>
+                  
+                  
+                    <Box mx={3}>
+                      
+                      <ShoppingCartOutlinedIcon fontSize='large'/> 
                     </Box>
-                  </Link>
+            
                 </Box>
               </CardActions>
             </Card>
@@ -109,4 +101,4 @@ function ListaProduto() {
     </>)
 }
 
-export default ListaProduto;
+export default UsuarioProduto;

@@ -13,30 +13,30 @@ function Footer() {
                 <Grid alignItems="center" item xs={12}>
                     <Box className='box1'>
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
-                            <Typography variant="h5" align="center" gutterBottom className='textos'>Sigam-nos nas redes sociais </Typography>
+                            <Typography variant="h5" align="center" gutterBottom className='textosFooter'>Sigam-nos nas redes sociais </Typography>
                         </Box>
                         <Box display="flex" alignItems="center" justifyContent="center">
-                            <a href="https://www.facebook.com/generationbrasil" target="_blank">
+                            <a href="https://www.facebook.com/profile.php?id=100075123653628" target="_blank">
                                 <FacebookIcon className='redes' />
                             </a>
-                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
+                            <a href="https://www.instagram.com/projetoyeco/" target="_blank">
                                 <InstagramIcon className='redes' />
                             </a>
                             <a href="https://youtu.be/Fev2MHAa-qo" target="_blank">
                                 <YouTubeIcon className='redes' />
                             </a>
-                            <a href="https://github.com/RaquelSantosG/Projeto_Y-Eco" target="_blank">
+                            <a href="https://github.com/Y-eco/" target="_blank">
                                 <GitHubIcon className='redes' />
                             </a>
                         </Box>
                     </Box>
                     <Box className='box2'>
                         <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" gutterBottom className='textos'>© 2021 Copyright: Grupo Y-Eco</Typography>
+                            <Typography variant="subtitle2" align="center" gutterBottom className='textosFooter'>© 2021 Copyright: Grupo Y-Eco</Typography>
                         </Box>
                         <Box>
-                            <a target="_blank" href="https://y-eco.herokuapp.com/">
-                                <Typography variant="subtitle2" gutterBottom className='textos' align="center">y-eco.herokuapp.com/</Typography>
+                            <a target="_blank" href="https://y-eco.herokuapp.com/" className='text-decoration-none'>
+                                <Typography variant="subtitle2" gutterBottom className='textosFooter' align="center">y-eco.herokuapp.com/</Typography>
                             </a>
                         </Box>
                     </Box>

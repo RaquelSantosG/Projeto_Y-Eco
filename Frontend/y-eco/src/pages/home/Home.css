@@ -34,7 +34,10 @@
     color: white;
     font-style: italic;
 }
-
+.textos{
+    color: white;
+    font-style: italic;
+}
 .img{
     width: 300px;
     height: 300px;
@@ -64,3 +67,13 @@
     text-decoration: none;
     color: black;
 }
+.imgH{
+
+    width: 50%;
+    height: 150%;
+}
+.textValor{
+    text-decoration: line-through;
+    color: red !important; 
+}
+

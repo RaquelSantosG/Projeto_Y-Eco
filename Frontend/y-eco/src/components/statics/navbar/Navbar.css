@@ -44,3 +44,13 @@
     height: 200px;
     
 }
+
+.linkProperties{
+    text-decoration: none;
+    color: white !important;
+}
+
+.boxToolbar2{
+    background-color: #00363a;
+    width:190px;
+}

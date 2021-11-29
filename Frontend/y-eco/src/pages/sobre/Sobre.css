@@ -1,9 +1,4 @@
-
-
 .imagem{
-   
-
-   
     width: 100vh;
     min-height: 100vh;
     background-size: cover;
@@ -14,9 +9,9 @@
     text-decoration: none;
 }
 
-.textos{
+.textosSobre{
     
-    
+    color: #00363a !important;
     font-weight: bold !important;
 }
 
